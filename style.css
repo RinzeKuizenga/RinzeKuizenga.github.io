@@ -1,0 +1,66 @@
+.custom-gradient{
+    background: linear-gradient(90deg, #150425, #23093B, #431C67)
+}
+.navbar {
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    font-family: 'Poppins', sans-serif;
+}
+.fade-in-text {
+    opacity: 0; 
+    animation: fadeIn 2s ease-in forwards; 
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Final state, fully visible */
+    }
+}
+.game-info-bubble {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+.game-info-bubble h2 {
+    font-size: 2rem;
+    color: indigo;
+}
+.game-info-bubble p {
+    font-size: 1rem;
+    color: #333;
+}
+.game-image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.game-image-container img,
+.game-image-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+.game-image-container video {
+    opacity: 0;
+    pointer-events: none;
+}
+.game-image-container:hover video {
+    opacity: 1;
+    pointer-events: auto;
+}
+.game-image-container:hover img {
+    opacity: 0;
+}
