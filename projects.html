@@ -7,43 +7,177 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body class="custom-gradient">
 
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">RK Portfolio</a>
+        <a class="navbar-brand" href="index.html">RK Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav w-100 justify-content-around">
-                <li class="nav-item"><a class="nav-link" href="#skills" style="color: aliceblue;">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" style="color: aliceblue;">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="projects.html" style="color: aliceblue;">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact" style="color: aliceblue;">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" style="color: aliceblue;">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section>
-        <div class="game-info-bubble">
+    <section class="jumbotron text-center jubbotron" style="background-image: url('MonkeyBackground.png'); background-size: cover; background-position: center; color: white;">
+        <div class="info-bubble left">
             <h2>Monkey Survivors</h2>
-            <p>Monkey Survivors is my mobile microgame I worked on for school. It's an action roguelike horde shooter, with random items and a crafting system.</p>
+            <p>Monkey Survivors is an action roguelike horde shooter mobile game with random items and a crafting system. I made this with a group for my microgame project.</p>
+            <a href="#" class="btn btn-outline-light" data-toggle="modal" data-target="#monkeySurvivorsModal">Learn More</a>
+        </div>
+        <img src="MonkeyItem.png" class="jumbotron-image right monkey" alt="Monkey Item">
+    </section>
 
-            <div class="media-container">
-                <img src="MonkeySurvivorsScreenshot.png" alt="Monkey Survivors">
+    <section class="jumbotron text-center jungotron" style="background-image: url('Gold.png'); background-size: cover; background-position: center; color: white;"></section>
 
-                <video controls>
-                    <source src="Monkey Survivors Trailer.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+    <section class="jumbotron text-center jubbotron" style="background-image: url('MarijnBackground.png'); background-size: cover; background-position: center; color: white;">
+        <div class="info-bubble right">
+            <h2>Untitled Horror Game</h2>
+            <p>A comedic Five Nights at Freddy's style horror game with complex mechanics to keep the monsters away. WORK IN PROGRESS</p>
+            <a href="#" class="btn btn-outline-light" data-toggle="modal" data-target="#untitledHorrorModal">Learn More</a>
+        </div>
+        <img src="GreenItem.png" class="jumbotron-image left" alt="Green Item">
+    </section>
+
+    <section class="jumbotron text-center jungotron" style="background-image: url('Gold.png'); background-size: cover; background-position: center; color: white;"></section>
+
+    <section class="jumbotron text-center jubbotron" style="background-image: url('OreyBackground.png'); background-size: cover; background-position: center; color: white;">
+        <div class="info-bubble left">
+            <h2>Orey</h2>
+            <p>Orey is a 2D infinite runner game with bosses and achievements that I made for my arcade game project for school.</p>
+            <a href="#" class="btn btn-outline-light" data-toggle="modal" data-target="#oreyModal">Learn More</a>
+        </div>
+        <img src="OreyItem.png" class="jumbotron-image right" alt="Orey Item">
+    </section>
+
+    <section class="jumbotron text-center jungotron" style="background-image: url('Gold.png'); background-size: cover; background-position: center; color: white;"></section>
+
+    <section class="jumbotron text-center jubbotron" style="background-image: url('SyntaxBackground.png'); background-size: cover; background-position: center; color: white;">
+        <div class="info-bubble right">
+            <h2>FATAL SYNTAX</h2>
+            <p>A small horror game I made that uses the Unity navmesh agent system for the enemy AI.</p>
+            <a href="#" class="btn btn-outline-light" data-toggle="modal" data-target="#fatalSyntaxModal">Learn More</a>
+        </div>
+        <img src="BugItem.png" class="jumbotron-image left" alt="Bug Item">
+    </section>
+
+    <div class="modal fade" id="monkeySurvivorsModal" tabindex="-1" aria-labelledby="monkeySurvivorsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="monkeySurvivorsLabel">Monkey Survivors</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Monkey Survivors is an action-packed roguelike game where players survive waves of enemies. It features random items, crafting mechanics, and a unique level progression system.</p>
+                    <p><strong>Platform:</strong> Mobile</p>
+                    <p><strong>Technologies:</strong> Unity, C#</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="untitledHorrorModal" tabindex="-1" aria-labelledby="untitledHorrorLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="untitledHorrorLabel">Untitled Horror Game</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>A comedic horror game with complex mechanics inspired by the popular Five Nights at Freddy's series.</p>
+                    <p><strong>Platform:</strong> PC</p>
+                    <p><strong>Technologies:</strong> Unity, C#</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="oreyModal" tabindex="-1" aria-labelledby="oreyLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="oreyLabel">Orey</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Orey is a thrilling 2D infinite runner featuring boss fights and a unique achievement system, created for an arcade game project.</p>
+                    <p><strong>Platform:</strong> PC</p>
+                    <p><strong>Technologies:</strong> Unity, C#</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="fatalSyntaxModal" tabindex="-1" aria-labelledby="fatalSyntaxLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fatalSyntaxLabel">FATAL SYNTAX</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>A small horror game that leverages Unity's NavMesh agent for enemy AI, delivering a tense and engaging experience.</p>
+                    <p><strong>Platform:</strong> PC</p>
+                    <p><strong>Technologies:</strong> Unity, C#</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="jumbotron text-center jungotron" style="background-image: url('Gold.png'); background-size: cover; background-position: center; color: white;"></section>
+
+    <section id="contact" class="container text-center py-5">
+        <h2 class="mb-4" style="color: rgb(255, 255, 255);">Contact</h2>
+        <p>rinzekuizenga@gmail.com</p>
+        <P>+31 6 39397801</P>
+        <P>____________________________________________</P>
+        <p>These are all of my socials if you would like to contact me.</p>
+        <div class="social-media-icons">
+            <a href="https://www.linkedin.com/in/rinze-kuizenga-39a006337/" target="_blank">
+                <img src="LinkedInIcon.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/RinzeKuizenga" target="_blank">
+                <img src="GitHubIcon.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.youtube.com/@zift2167/featured" target="_blank">
+                <img src="YoutubeIcon.png" alt="YouTube" class="social-icon" class="Youtube">
+            </a>
+            <a href="https://www.instagram.com/rinze.kuizenga/" target="_blank">
+                <img src="InstagramIcon.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://x.com/KingRinze" target="_blank">
+                <img src="XIcon.png" alt="X" class="social-icon">
+            </a>
+            <a href="https://www.tiktok.com/@rinzekuizenga" target="_blank">
+                <img src="TikTokIcon.png" alt="TikTok" class="social-icon">
+            </a>
         </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>
