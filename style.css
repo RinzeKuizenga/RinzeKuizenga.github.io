@@ -42,9 +42,9 @@
     border-radius: 10px;
 }
 .about-bubble {
-    position: relative; /* Ensure it has a higher stacking context */
-    z-index: 1; /* Above stars */
-    background-color: rgba(17, 6, 17, 0.6); /* Adjust as needed */
+    position: relative; 
+    z-index: 1; 
+    background-color: rgba(17, 6, 17, 0.6); 
     border-radius: 10px;
 }
 
@@ -60,7 +60,7 @@
 body{
     color: white;
 }
-/* Gradient background applied to main container */
+
 .gradient-background {
     position: relative;
     width: 100vw;
@@ -70,36 +70,34 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-/* Star overlay container to position stars above background */
+
 .star-overlay {
-    position: fixed; /* Change to fixed to cover entire viewport */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Allows clicks to go through to main content */
-    z-index: 0; /* Ensure it is below the about bubble and other content */
+    pointer-events: none; 
+    z-index: 0; 
 }
 
 
-/* Star styling */
 .star {
     position: absolute;
-    background: rgba(200, 149, 213, 0.8); /* Light purple with transparency */
-    width: 8px; /* Size of the star */
+    background: rgba(200, 149, 213, 0.8);
+    width: 8px; 
     height: 8px;
     border-radius: 50%;
     animation: moveUp infinite linear;
 }
 
-/* Keyframes for moving stars upward */
 @keyframes moveUp {
     0% {
-        transform: translateY(100vh); /* Start below the screen */
+        transform: translateY(100vh); 
         opacity: 0.5;
     }
     100% {
-        transform: translateY(-100vh); /* Move above the screen */
+        transform: translateY(-100vh); 
         opacity: 0;
     }
 }
@@ -108,46 +106,45 @@ body{
 .star:nth-child(even) { animation-duration: 18s; }
 
 .jumbotron {
-    position: relative; /* Ensure it has a higher stacking context */
-    z-index: 1; /* Above stars */
+    position: relative; 
+    z-index: 1; 
 }
 
 .social-media-icons {
     display: flex;
-    justify-content: space-around; /* Center the icons */
-    gap: 15px; /* Space between icons */
-    margin-top: 20px; /* Space above the icons */
+    justify-content: space-around; 
+    gap: 15px; 
+    margin-top: 20px; 
 }
 
 .social-icon {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Maintain aspect ratio */
-    transition: transform 0.3s; /* Smooth hover effect */
+    width: 40px; 
+    height: 40px;
+    transition: transform 0.3s; 
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1); 
 }
 
-/* Progress Bar Styles */
+
 .progress {
-    background-color: #000; /* Set the background color of the progress bar to black */
-    border-radius: 5px; /* Optional: Rounded corners */
+    background-color: #000; 
+    border-radius: 5px;
 }
 
 .progress-bar {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 25%, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.5)); /* Striped effect */
-    background-size: 40px 40px; /* Size of the stripes */
-    animation: stripe 1s linear infinite; /* Animation for the stripes */
+    background-size: 40px 40px; 
+    animation: stripe 1s linear infinite;
 }
 
-/* Keyframes for the striped animation */
 @keyframes stripe {
     from {
-        background-position: 0 0; /* Start position */
+        background-position: 0 0; 
     }
     to {
-        background-position: 40px 0; /* End position */
+        background-position: 40px 0; 
     }
 }
 
@@ -191,7 +188,7 @@ body{
 }
 
 .jumbotron {
-    margin: 0;    /* Remove margin */
+    margin: 0;   
     padding: 0;
 }
 
@@ -199,35 +196,34 @@ body{
     height: 10px;
 }
 
-/* Common styles for the info bubbles inside jumbotrons */
 .info-bubble {
-    background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent grey */
+    background-color: rgba(128, 128, 128, 0.8); 
     color: white;
     padding: 20px;
     border-radius: 10px;
     max-width: 300px;
     text-align: left;
     position: absolute;
-    top: 50%; /* Center vertically in the jumbotron */
+    top: 50%; 
     transform: translateY(-50%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     font-family: 'Poppins', sans-serif;
     z-index: 2;
 }
 
-/* Positioning the bubble on the left inside the jumbotron */
+
 .info-bubble.left {
-    left: 20px; /* Align to the left with some margin */
+    left: 20px;
     animation: fadeInLeft 1s ease-in-out;
 }
 
-/* Positioning the bubble on the right inside the jumbotron */
+
 .info-bubble.right {
-    right: 20px; /* Align to the right with some margin */
+    right: 20px; 
     animation: fadeInRight 1s ease-in-out;
 }
 
-/* Button styling within the info bubble */
+
 .info-bubble .btn-outline-light {
     margin-top: 10px;
     color: white;
@@ -239,7 +235,6 @@ body{
     color: black;
 }
 
-/* Animations */
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
@@ -262,39 +257,39 @@ body{
     }
 }
 
-/* Additional styling for jumbotron to maintain position */
+
 .jubbotron {
-    position: relative; /* Ensures children are positioned absolutely relative to the jumbotron */
-    min-height: 400px; /* Optional: adjust height as needed */
+    position: relative; 
+    min-height: 400px;
 }
-/* Common styles for the info bubbles inside jumbotrons */
+
 .info-bubble {
-    background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent grey */
+    background-color: rgba(26, 26, 26, 0.8);
     color: white;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
     text-align: left;
     position: absolute;
-    top: 50%; /* Center vertically in the jumbotron */
+    top: 50%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     font-family: 'Poppins', sans-serif;
     z-index: 2;
 }
 
-/* Positioning the bubble on the left inside the jumbotron */
+
 .info-bubble.left {
-    left: 20px; /* Align to the left with some margin */
+    left: 20px; 
     animation: fadeInLeft 1s ease-in-out;
 }
 
-/* Positioning the bubble on the right inside the jumbotron */
+
 .info-bubble.right {
-    right: 20px; /* Align to the right with some margin */
+    right: 20px; 
     animation: fadeInRight 1s ease-in-out;
 }
 
-/* Button styling within the info bubble */
+
 .info-bubble .btn-outline-light {
     margin-top: 10px;
     color: white;
@@ -307,22 +302,22 @@ body{
 }
 
 
-/* Additional styling for jumbotron to maintain position */
+
 .jubbotron {
-    position: relative; /* Ensures children are positioned absolutely relative to the jumbotron */
-    min-height: 400px; /* Optional: adjust height as needed */
+    position: relative; 
+    min-height: 400px; 
 }
 
 .jumbotron-image {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 550px; /* Adjust size as needed */
+    max-width: 550px;
     border-radius: 10px;
     z-index: 2;
 }
 
-/* Positioning images opposite the info bubbles */
+
 .jumbotron-image.left {
     left: 20px;
 }
