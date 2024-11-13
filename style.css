@@ -333,3 +333,12 @@ body{
 .welcome{
     height: 650px;
 }
+
+.modal{
+    color: black;
+}
+
+.vidimg{
+    display: flex;
+    align-items: row;
+}
