@@ -134,7 +134,7 @@ body{
 }
 
 .progress-bar {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 25%, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.5)); /* Striped effect */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 25%, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.5)); 
     background-size: 40px 40px; 
     animation: stripe 1s linear infinite;
 }
@@ -335,7 +335,11 @@ body{
 }
 
 .modal{
-    color: black;
+    color: white;
+}
+
+.modal-content{
+    background: rgb(27, 27, 27);
 }
 
 .vidimg{
