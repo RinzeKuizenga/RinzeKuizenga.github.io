@@ -1,141 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RK Portfolio</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+@font-face{
+  font-family: 'DS-Digital';
+  src: url('DS-DIGIB.ttf')
+}
+    body {
+      background-image: url('WiiBackground.png');
+      background-repeat: repeat;
+      background-size: 80%;
+      cursor: url(cursor.png), auto;
+    }
+
+    #bottom-border {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    #clock{
+      position: fixed;
+      top: 730px;
+      left: 940px;
+      scale: 630%;
+      font-family: 'DS-Digital';
+      color: #8e8f8b;
+    }
+    #date{
+      position: fixed;
+      top: 840px;
+      left: 920px;
+      scale: 400%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight:1000;
+      color: #74747a;
+      z-index: 2;
+    }
+.container{
+  position: fixed;
+  top: 60px;
+  left: 180px;
+  display: grid;
+  grid-template-columns: repeat(4, 385px);
+  grid-template-rows: repeat(3, 190px);
+  gap: 15px;
+
+}
+    .cell{
+      background-color: #dfdfdf;
+      border-color: #979797;
+      border-width: thick;
+      border-radius: 20px;     
+    }
+
+    
+
+    .cell-1{
+      background-image: url('MonkeyBackground.png');
+    }
+
+  </style>
 </head>
-<body class="custom-gradient">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="index.html">RK Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav w-100 justify-content-around">
-                <li class="nav-item"><a class="nav-link" href="index.html" style="color: aliceblue;">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html" style="color: aliceblue;">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html" style="color: aliceblue;">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html" style="color: aliceblue;">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body>
+<div id="clock">12:00 pm</div>
+<div id="date">Tue 06/04</div>
 
-    <section class="jumbotron text-center" style="background-image: url('coding-background.png'); background-size: cover; background-position: center; color: white; padding: 100px 0; height: 500px;">
-        <div class="container">
-            <h1 class="jumbotron-heading fade-in-text" style="font-size: 4rem;">Welcome to My Portfolio</h1>
-            <p class="lead" style="font-size: 1.5rem;">Rinze Kuizenga | Software Developer</p>
-            <a href="#contact" class="btn btn-primary mt-3" style="font-size: 1.25rem;">Get in Touch</a>
-        </div>
-    </section>
-    
-
-    <BR>
-
-    <section id="about" class="container text-center py-5 about-bubble">
-        <h2 class="mb-4">WHO AM I?</h2>
-        <p>Hi! My name is Rinze Kuizenga and i am 17 years old</p>
-        <p>I am currently studying Software Development as a student at ROC van Twente Enschede</p>
-        <p>I love everything technology, from building pc's to video editing to programming, this website is to show off some of my programming stuff, so check it out!</p>
-    </section>
-
-    <div class="center-container">
-        <div class="image-button-container">
-            <img src="image (1).png" class="projects" alt="Project Image">
-            <a href="projects.html" class="btn btn-primary image-button">Bring me to em!</a>
-        </div>
-    </div>
-    
-    
-
-    <section id="skills" class="container py-5">
-        <h2 class="text-center mb-4" style="color: rgb(255, 255, 255);">Skills</h2>
-        <div class="row text-center">
-            <div class="col-md-6">
-                <h4>HTML & CSS</h4>
-                <div class="progress my-2">
-                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">80%</div>
-                </div>
-                <h4>Bootstrap</h4>
-                <div class="progress my-2">
-                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 80%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">80%</div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h4>C#</h4>
-                <div class="progress my-2">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">90%</div>
-                </div>
-                <h4>JavaScript</h4>
-                <div class="progress my-2">
-                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="container py-5">
-        <h2 class="text-center mb-4" style="color: rgb(255, 255, 255);">My CV</h2>
-        <div class="row text-center">
-        <img src="CV Rinze Kuizenga.png" style="width: 500px; display: block; margin-left: auto; margin-right: auto;">
-            </div>
-            <p>English version coming soon.</p>
-        </div>
-    </section>
-
-<section id="contact" class="container text-center py-5">
-    <h2 class="mb-4" style="color: rgb(255, 255, 255);">Contact</h2>
-    <p>rinzekuizenga@gmail.com</p>
-    <P>+31 6 39397801</P>
-    <P>____________________________________________</P>
-    <p>These are all of my socials if you would like to contact me.</p>
-    <div class="social-media-icons">
-        <a href="https://www.linkedin.com/in/rinze-kuizenga-39a006337/" target="_blank">
-            <img src="LinkedInIcon.png" alt="LinkedIn" class="social-icon">
-        </a>
-        <a href="https://github.com/RinzeKuizenga" target="_blank">
-            <img src="GitHubIcon.png" alt="GitHub" class="social-icon">
-        </a>
-        <a href="https://www.youtube.com/@zift2167/featured" target="_blank">
-            <img src="YoutubeIcon.png" alt="YouTube" class="social-icon" class="Youtube">
-        </a>
-        <a href="https://www.instagram.com/rinze.kuizenga/" target="_blank">
-            <img src="InstagramIcon.png" alt="Instagram" class="social-icon">
-        </a>
-        <a href="https://x.com/KingRinze" target="_blank">
-            <img src="XIcon.png" alt="X" class="social-icon">
-        </a>
-        <a href="https://www.tiktok.com/@rinzekuizenga" target="_blank">
-            <img src="TikTokIcon.png" alt="TikTok" class="social-icon">
-        </a>
-    </div>
-</section>
-
-
-    <div class="star-overlay">
-    </div>
-
-    <script>
-
-        const starOverlay = document.querySelector('.star-overlay');
-
-
-        const numStars = 100;
-
-        for (let i = 0; i < numStars; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-
-            star.style.left = `${Math.random() * 100}vw`;
-            star.style.top = `${Math.random() * 100}vh`;
-
-            starOverlay.appendChild(star);
-        }
-    </script>
-
+<div class="container">
+  <div class ="cell cell-1">1.</div>
+  <div class ="cell cell-2">2.</div>
+  <div class ="cell cell-3">3.</div>
+  <div class ="cell cell-4">4.</div>
+  <div class ="cell cell-5">5.</div>
+  <div class ="cell cell-6">6.</div>
+  <div class ="cell cell-7">7.</div>
+  <div class ="cell cell-8">8.</div>
+  <div class ="cell cell-9">9.</div>
+  <div class ="cell cell-10">10.</div>
+  <div class ="cell cell-11">11.</div>
+    <div class ="cell cell-12">12.</div>
+  </div>
+  
+  <img id="bottom-border" src="WiiBorder.png" />
 </body>
-
 </html>
