@@ -84,6 +84,15 @@
       border-radius: 20px;     
       background-position: center;
       transition: transform .2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cell-img{
+      scale: 120%;
+    }
+    .cell-1{
+      background-image: url("MonkeyBackground.png");
     }
     .cell:hover{
       transform: scale(1.05);
@@ -102,10 +111,11 @@
       background-position: center;
       z-index: 4;
       
-      opacity: 0;
+      opacity: 1;
       transform: translateY(20px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       pointer-events:none;
+      background-image: url(popupBackground.png);      
 }
 .backbutton{
     position: absolute;
@@ -145,6 +155,10 @@
   pointer-events: none;
 }
 
+.borders{
+  border-radius: 10px;
+}
+
   </style>
 </head>
 <body>
@@ -152,7 +166,9 @@
 <div id="date">Tue 07/04</div>
 
 <div class="container">
-  <div class ="cell cell-1">1.</div>
+  <div class="cell cell-1">
+  <img src="MonkeyLogo.png" class="cell-img">
+</div>
   <div class ="cell cell-2">2.</div>
   <div class ="cell cell-3">3.</div>
   <div class ="cell cell-4">4.</div>
@@ -165,16 +181,17 @@
   <div class ="cell cell-11">11.</div>
     <div class ="cell cell-12">12.</div>
   </div>
-
-  <div class ="popup">
-    <button id="backButton" onclick="closePopup()">
-    <div class="backbutton">Back</div>
-    </button>
-  </div>
-
-<button id="RinzeButton" onclick="openPopup()">
-  <img src="RinzeButton.png"/>
-</button>
+  
+  <button id="RinzeButton" onclick="openPopup()">
+    <img src="RinzeButton.png"/>
+  </button>
+  
+    <div class ="popup">
+      <button id="backButton" onclick="closePopup()">
+      <div class="backbutton">Back</div>
+      </button>
+    </div>
+  
   <img id="MiiPhoto" src="MiiRender.png"/>
   <img id="bottom-border" src="WiiBorder.png" />
 
