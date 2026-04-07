@@ -10,7 +10,7 @@
       background-image: url('WiiBackground.png');
       background-repeat: repeat;
       background-size: 80%;
-      cursor: url(cursor.png), auto;
+      cursor: url(cursor1.png), auto;
     }
 
     #bottom-border {
@@ -39,6 +39,34 @@
       color: #74747a;
       z-index: 2;
     }
+    #MiiPhoto{
+      position: fixed;
+      z-index: 3;
+      top: 100px;
+      left: 650px;
+      scale: 30%;
+    }
+#RinzeButton {
+  position: fixed;
+  z-index: 2;
+  top: -106px;
+  right: 778px;
+
+  scale: 8.7%;
+  background: none;
+  padding: 0;
+      cursor: url(cursor1.png), auto;
+  
+}
+
+#RinzeButton img {
+  scale: 110%;
+  transition: transform .2s;
+}
+
+#RinzeButton:hover img {
+  transform: scale(1.05);
+}
 .container{
   position: fixed;
   top: 60px;
@@ -51,22 +79,34 @@
 }
     .cell{
       background-color: #dfdfdf;
-      border-color: #979797;
-      border-width: thick;
+      border: 4px solid #979797;
       border-radius: 20px;     
+      background-position: center;
+      transition: transform .2s;
     }
-
-    
-
-    .cell-1{
-      background-image: url('MonkeyBackground.png');
+    .cell:hover{
+      transform: scale(1.05);
     }
+.popup{
+    position: absolute;
+    top: 16%;
+    left: 26%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 1000px;
+    height: 700px;
+      background-color: #f1f1f1;
+      border: 4px solid #51bbda;
+      border-radius: 20px;     
+      background-position: center;
+      z-index: 4;
+}
 
   </style>
 </head>
 <body>
-<div id="clock">12:00 pm</div>
-<div id="date">Tue 06/04</div>
+<div id="clock">11:32 pm</div>
+<div id="date">Tue 07/04</div>
 
 <div class="container">
   <div class ="cell cell-1">1.</div>
@@ -82,7 +122,18 @@
   <div class ="cell cell-11">11.</div>
     <div class ="cell cell-12">12.</div>
   </div>
-  
+
+  <div class ="popup"></div>
+
+<button id="RinzeButton">
+  <img src="RinzeButton.png" />
+</button>
+  <img id="MiiPhoto" src="MiiRender.png"/>
   <img id="bottom-border" src="WiiBorder.png" />
+
+<audio autoplay loop>
+    <source src="Mii Editor - Mii Maker (Wii U) Music.mp3" type="audio/mpeg">
+</audio>
+
 </body>
 </html>
