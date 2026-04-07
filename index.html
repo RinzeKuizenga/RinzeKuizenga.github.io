@@ -75,6 +75,7 @@
   grid-template-columns: repeat(4, 385px);
   grid-template-rows: repeat(3, 190px);
   gap: 15px;
+  
 
 }
     .cell{
@@ -100,6 +101,48 @@
       border-radius: 20px;     
       background-position: center;
       z-index: 4;
+      
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events:none;
+}
+.backbutton{
+    position: absolute;
+    top: 93%;
+    left: 26%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 400px;
+    height: 60px;
+      background-color: #ffffff;
+      border: 4px solid #51bbda;
+      border-radius: 50px;     
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 200%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #74747a;
+      background-image: url("ButtonBackground.png");
+      background-size: 100%;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+}
+.backbutton:hover{
+  transform: scale(1.05);
+}
+.open-popup{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.close-popup{
+    opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
   </style>
@@ -123,10 +166,14 @@
     <div class ="cell cell-12">12.</div>
   </div>
 
+  <div class ="popup">
+    <button id="backButton" onclick="closePopup()">
+    <div class="backbutton">Back</div>
+    </button>
+  </div>
 
-
-<button id="RinzeButton">
-  <img src="RinzeButton.png" />
+<button id="RinzeButton" onclick="openPopup()">
+  <img src="RinzeButton.png"/>
 </button>
   <img id="MiiPhoto" src="MiiRender.png"/>
   <img id="bottom-border" src="WiiBorder.png" />
@@ -137,3 +184,17 @@
 
 </body>
 </html>
+
+<script>
+  let popup = document.querySelector(".popup");
+
+  function openPopup(){
+    popup.classList.remove("close-popup");
+popup.classList.add("open-popup");
+  }
+
+  function closePopup(){
+    popup.classList.remove("open-popup");
+    popup.classList.add("close-popup");
+  }
+</script>
