@@ -74,17 +74,18 @@ footer{
 
 #CVButton{
 position: absolute;
-width: 10vw;
-top: 15%;
-left: 86%;
+width: 10.4vw;
+top: 14.4%;
+left: 85.7%;
 z-index:3;
       cursor: url(cursor1.png), auto;
-background: none;
-border: none;
+      background: none;
+      border: none;
+
 }
 
 #CVButton img{
-width: 9.5vw;
+width: 9.7vw;
 transition: transform .2s;
 }
 
@@ -142,10 +143,39 @@ transition: transform .2s;
       background-image: url(popupBackground.png);      
             background-size: cover;
 }
+.CVpopup{
+    position: absolute;
+    top: 16%;
+    left: 30%;
+    margin-top: -1%;
+    margin-left: 0%;
+    width: 40%;
+    height: 70%;
+      background-color: #f1f1f1;
+      border: 4px solid #51bbda;
+      border-radius: 2%;     
+      background-position: center;
+      z-index: 4;
+      
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events:none;
+      background-image: url(popupBackground.png);      
+            background-size: cover;
+}
+.CVpopup img{
+  width: 50%;
+  position: absolute;
+  left: 27%;
+  top: 3.4%;
+  border: 5px solid #51bbda;
+  border-radius: 20px;
+}
 .backbutton{
     position: absolute;
     top: 93%;
-    left: 26%;
+    left: 33%;
     margin-top: -50px;
     margin-left: -50px;
     width: 35%;
@@ -167,6 +197,34 @@ transition: transform .2s;
       transition: transform .2s;
 }
 .backbutton:hover{
+  transform: scale(1.05);
+}
+
+.CVbackbutton{
+    position: absolute;
+    top: 93%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 35%;
+    height: 8.9%;
+      background-color: #ffffff;
+      border: 4px solid #51bbda;
+      border-radius: 50px;     
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 200%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #74747a;
+      background-image: url("ButtonBackground.png");
+      background-size: cover;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+}
+.CVbackbutton:hover{
   transform: scale(1.05);
 }
 .open-popup{
@@ -201,6 +259,9 @@ transition: transform .2s;
 <body>
   
   <div class="container">
+    <audio id="hover" preload="auto">
+      <source src="HoverSound.wav">
+    </audio>
     <div class="cell cell-1"></div>
     <div class ="cell cell-2">2.</div>
     <div class ="cell cell-3">3.</div>
@@ -217,8 +278,16 @@ transition: transform .2s;
   
   
   <div class ="popup">
-    <button id="backButton" onclick="closePopup()">
+    <button id="backButton" onclick="closePopup(); playSelect();">
       <div class="backbutton">Back</div>
+    </button>
+  </div>
+
+    <div class ="CVpopup">
+      <div class="cvtext">This is my cv.</div>
+      <img src="CV Rinze Kuizenga.png">
+    <button id="CVbackButton" onclick="closeCV(); playSelect();">
+      <div class="CVbackbutton">Back</div>
     </button>
   </div>
   
@@ -228,17 +297,20 @@ transition: transform .2s;
     
     <div id="clock">14<span class="blink">:</span>32 pm</div>
     <div id="date">Tue 08/04</div>
-  <button id="RinzeButton" onclick="openPopup()">
+  <button id="RinzeButton" onclick="openPopup(); playSelect();">
     <img src="RinzeButton.png"/>
   </button>
   <img id="MiiPhoto" src="MiiRender.png"/>
-  <button id="CVButton" onclick="openPopup()">
+  <button id="CVButton" onclick="openCV(); playSelect();">
     <img src="CVButton.png"/>
   </button>
 </footer>
 
 <audio autoplay loop>
-    <source src="Mii Editor - Mii Maker (Wii U) Music.mp3" type="audio/mpeg">
+    <source src="Mii Editor - Mii Maker (Wii U) Music.mp3" type="audio/mpeg" preload="auto" >
+</audio>
+<audio id="selectSound" preload="auto">
+  <source src="SelectSound.wav" type="audio/wav">
 </audio>
 
 </body>
@@ -257,7 +329,20 @@ popup.classList.add("open-popup");
     popup.classList.add("close-popup");
   }
 
+let CVpopup = document.querySelector(".CVpopup");
+
+function openCV(){
+    CVpopup.classList.remove("close-popup");
+    CVpopup.classList.add("open-popup");
+}
+
+function closeCV(){
+    CVpopup.classList.remove("open-popup");
+    CVpopup.classList.add("close-popup");
+}
+
   //window.addEventListener("load", () => {openPopup();});
+  window.addEventListener("load", () => {openCV();});
 
   function updateClock(){
     const now = new Date();
@@ -279,4 +364,10 @@ popup.classList.add("open-popup");
 updateClock();
 setInterval(updateClock, 1000);
 updateDate();
+
+function playSelect(){
+const selectSound = document.getElementById("selectSound");
+selectSound.currentTime = 0;
+selectSound.play();
+}
 </script>
