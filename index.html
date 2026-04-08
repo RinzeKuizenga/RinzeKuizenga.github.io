@@ -14,53 +14,55 @@
     }
 
     #bottom-border {
-      position: fixed;
-      bottom: 0;
-      left: 0;
       width: 100%;
+      display: block;
       z-index: 1;
     }
 
+footer{
+  position: fixed;
+    bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
     #clock{
-      position: fixed;
-      top: 730px;
-      left: 940px;
-      scale: 630%;
+      position: absolute;
+      top: 5%;
+      left: 42.7%;
+      font-size: 5.2vw;
       font-family: 'DS-Digital';
       color: #8e8f8b;
     }
     #date{
-      position: fixed;
-      top: 840px;
-      left: 920px;
-      scale: 400%;
+      position: absolute;
+      top: 49%;
+      left: 42.5%;
+      font-size: 3.3vw;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-weight:1000;
       color: #74747a;
       z-index: 2;
     }
     #MiiPhoto{
-      position: fixed;
+      position: absolute;
+      width: 23vw;
+      top: -31%;
+      left: 62%;
       z-index: 3;
-      top: 100px;
-      left: 650px;
-      scale: 30%;
     }
 #RinzeButton {
-  position: fixed;
-  z-index: 2;
-  top: -106px;
-  right: 778px;
-
-  scale: 8.7%;
-  background: none;
+        position: absolute;
+      width: 10vw;
+      top: 15%;
+      left: 4%;
+      z-index: 3;
   padding: 0;
       cursor: url(cursor1.png), auto;
-  
 }
 
 #RinzeButton img {
-  scale: 110%;
+  width: 9.5vw;
   transition: transform .2s;
 }
 
@@ -68,15 +70,16 @@
   transform: scale(1.05);
 }
 .container{
-  position: fixed;
-  top: 60px;
-  left: 180px;
   display: grid;
-  grid-template-columns: repeat(4, 385px);
-  grid-template-rows: repeat(3, 190px);
-  gap: 15px;
-  
-
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 1%;
+  row-gap: 2.5%;
+  left: 2.1%;
+  width: 85vw;
+  height: 63.4vh;
+  margin: 6vh auto 0 auto;
+  position: relative;
 }
     .cell{
       background-color: #dfdfdf;
@@ -89,7 +92,7 @@
       align-items: center;
     }
     .cell-img{
-      scale: 120%;
+      transform: scale(1.5);
     }
     .cell-1{
       background-image: url("MonkeyBackground.png");
@@ -111,7 +114,7 @@
       background-position: center;
       z-index: 4;
       
-      opacity: 1;
+      opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       pointer-events:none;
@@ -162,38 +165,43 @@
   </style>
 </head>
 <body>
-<div id="clock">67:67 pm</div>
-<div id="date">Tue 67/67</div>
-
-<div class="container">
-  <div class="cell cell-1">
-  <img src="MonkeyLogo.png" class="cell-img">
-</div>
-  <div class ="cell cell-2">2.</div>
-  <div class ="cell cell-3">3.</div>
-  <div class ="cell cell-4">4.</div>
-  <div class ="cell cell-5">5.</div>
-  <div class ="cell cell-6">6.</div>
-  <div class ="cell cell-7">7.</div>
-  <div class ="cell cell-8">8.</div>
-  <div class ="cell cell-9">9.</div>
-  <div class ="cell cell-10">10.</div>
-  <div class ="cell cell-11">11.</div>
+  
+  <div class="container">
+    <div class="cell cell-1">
+      <img src="MonkeyLogo.png" class="cell-img">
+    </div>
+    <div class ="cell cell-2">2.</div>
+    <div class ="cell cell-3">3.</div>
+    <div class ="cell cell-4">4.</div>
+    <div class ="cell cell-5">5.</div>
+    <div class ="cell cell-6">6.</div>
+    <div class ="cell cell-7">7.</div>
+    <div class ="cell cell-8">8.</div>
+    <div class ="cell cell-9">9.</div>
+    <div class ="cell cell-10">10.</div>
+    <div class ="cell cell-11">11.</div>
     <div class ="cell cell-12">12.</div>
   </div>
   
-  <button id="RinzeButton" onclick="openPopup()">
+  
+  <div class ="popup">
+    <button id="backButton" onclick="closePopup()">
+      <div class="backbutton">Back</div>
+    </button>
+  </div>
+  
+<footer id="bottom-ui">
+
+    <img id="bottom-border" src="WiiBorder.png" />
+    
+    <div id="clock">67:67 pm</div>
+    <div id="date">Tue 67/67</div>
+    <button id="RinzeButton" onclick="openPopup()">
     <img src="RinzeButton.png"/>
   </button>
-  
-    <div class ="popup">
-      <button id="backButton" onclick="closePopup()">
-      <div class="backbutton">Back</div>
-      </button>
-    </div>
-  
+
   <img id="MiiPhoto" src="MiiRender.png"/>
-  <img id="bottom-border" src="WiiBorder.png" />
+</footer>
 
 <audio autoplay loop>
     <source src="Mii Editor - Mii Maker (Wii U) Music.mp3" type="audio/mpeg">
@@ -214,4 +222,6 @@ popup.classList.add("open-popup");
     popup.classList.remove("open-popup");
     popup.classList.add("close-popup");
   }
+
+  //window.addEventListener("load", () => {openPopup();});
 </script>
