@@ -127,6 +127,14 @@ transition: transform .2s;
       background-image: url("KamoSplashgif.gif");
       background-size: cover;
     }
+    .cell-4{
+      background-image: url("CadenzaSplashgif.gif");
+      background-size: cover;
+    }
+    .cell-5{
+      background-image: url("RustBucketSplashgif.gif");
+      background-size: cover;
+    }
     .cell:hover{
       transform: scale(1.05);
     }
@@ -279,7 +287,7 @@ transition: transform .2s;
     <audio id="hover" preload="auto">
       <source src="HoverSound.wav">
     </audio>
-    <div class="cell cell-1"></div>
+    <div class="cell cell-1" onclick="playZoom();"></div>
     <div class ="cell cell-2"></div>
     <div class ="cell cell-3"></div>
     <div class ="cell cell-4"></div>
@@ -328,6 +336,9 @@ transition: transform .2s;
 </audio>
 <audio id="selectSound" preload="auto">
   <source src="SelectSound.wav" type="audio/wav">
+</audio>
+<audio id="zoomSound" preload="auto">
+  <source src="EnterGameSound.wav" type="audio/wav">
 </audio>
 
 </body>
@@ -386,5 +397,11 @@ function playSelect(){
 const selectSound = document.getElementById("selectSound");
 selectSound.currentTime = 0;
 selectSound.play();
+}
+
+function playZoom(){
+const zoomSound = document.getElementById("zoomSound");
+zoomSound.currentTime = 0;
+zoomSound.play();
 }
 </script>
