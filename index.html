@@ -93,6 +93,81 @@ transition: transform .2s;
   transform: scale(1.05);
 }
 
+.gamescene{
+    position: absolute;
+    right: -0.6%;
+    bottom: -1%;
+    width: 98%;
+    height: 96%;
+      border: 30px solid #000000;
+      background-color: white;
+      border-radius: 2%;     
+      background-position: center;
+      z-index: 5;
+}
+.gamescenebottom{
+      position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 20%;
+    z-index: 4;
+}
+.infobutton{
+      position: absolute;
+    top: 89.5%;
+    left: 28%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 24%;
+    height: 11%;
+      background-color: #ffffff;
+      border: 4px solid #51bbda;
+      border-radius: 50px;     
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 250%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #3b3b3b;
+      background-image: url("ButtonBackground.png");
+      background-size: cover;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+}
+.infobutton:hover{
+  transform: scale(1.05);
+}
+
+.downloadbutton{
+        position: absolute;
+    top: 89.5%;
+    left: 55%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 24%;
+    height: 11%;
+      background-color: #ffffff;
+      border: 4px solid #51bbda;
+      border-radius: 50px;     
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 250%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #3b3b3b;
+      background-image: url("ButtonBackground.png");
+      background-size: cover;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+}
+.downloadbutton:hover{
+  transform: scale(1.05);
+}
+
 .container{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -108,7 +183,7 @@ transition: transform .2s;
     .cell{
       background-color: #dfdfdf;
       border: 4px solid #979797;
-      border-radius: 20px;     
+      border-radius: 20px;   
       background-position: center;
       transition: transform .2s;
       display: flex;
@@ -216,6 +291,7 @@ transition: transform .2s;
   transform: scale(1.05);
 }
 
+
 .CVbackbutton{
     position: absolute;
     top: 93%;
@@ -282,12 +358,17 @@ transition: transform .2s;
   </style>
 </head>
 <body>
+  <div class="gamescene">
+    <img class="gamescenebottom" src="PageBackground.png">
+          <div class="downloadbutton">Download</div>
+          <div class="infobutton">Information</div>
+  </div>
   <div class="infoText">Check out some of my projects!</div>
   <div class="container">
     <audio id="hover" preload="auto">
       <source src="HoverSound.wav">
     </audio>
-    <div class="cell cell-1" onclick="playZoom();"></div>
+    <div class="cell cell-1" onclick="playSelect(); playZoom();"></div>
     <div class ="cell cell-2"></div>
     <div class ="cell cell-3"></div>
     <div class ="cell cell-4"></div>
@@ -370,7 +451,7 @@ function closeCV(){
 }
 
   //window.addEventListener("load", () => {openPopup();});
-  window.addEventListener("load", () => {openCV();});
+  //window.addEventListener("load", () => {openCV();});
 
   function updateClock(){
     const now = new Date();
