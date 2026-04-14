@@ -58,21 +58,22 @@ footer{
     }
     #TextBubble{
             position: absolute;
+            pointer-events: none;
       width: 24vw;
       top: -55%;
       left: 62%;
       z-index: 100000;
-      transition: transform .2s ease;
+      transition: transform .2s ease, opacity .2s ease;
       opacity: 0;
       transform: translateY(10px);
     }
     .TextBubbleText{
                   position: absolute;
-      
-      top: -45.6%;
+      pointer-events: none;
+      top: -47%;
       left: 63.6%;
       z-index: 100000;
-      transition: transform .2s ease;
+      transition: transform .2s ease, opacity .2s ease;
       font-size: 1.5vw;
       color: #74747a;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -80,11 +81,11 @@ footer{
       opacity: 0;
         transform: translateY(10px);
     }
-    .mii-container:hover #TextBubble,
-    .mii-container:hover .TextBubbleText{
-      opacity: 1;
-      transform: translateY(0);
-    }
+#MiiPhoto:hover ~ #TextBubble,
+#MiiPhoto:hover ~ .TextBubbleText {
+  opacity: 1;
+  transform: translateY(0);
+}
 #RinzeButton {
         position: absolute;
       width: 10vw;
@@ -281,6 +282,14 @@ transition: transform .2s;
       background-image: url(popupBackground.png);      
             background-size: cover;
 }
+.popuptext{
+  background-color: #e5e5e6;
+  border-radius: 20px;
+  top:20%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+}
 .CVpopup{
     position: absolute;
     top: 16%;
@@ -402,14 +411,54 @@ transition: transform .2s;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       color: #74747a;
 }
+
+#mutebutton{
+      position: absolute;
+      width: 1.9vw;
+      top: 69%;
+      left: 28%;   
+      transition: transform .2s ease;
+}
+#mutebutton:hover{
+  transform: translateY(3px);
+}
+#skipbutton{
+       position: absolute;
+      width: 1.9vw;
+      top: 69%;
+      left: 30%;   
+      transition: transform .2s ease;
+}
+#skipbutton:hover{
+  transform: translateY(3px);
+}
+.audioname{
+      position: absolute;
+      top: 59.1%;
+      left: 28.2%;
+      font-size: 0.9vw;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight:1000;
+      color: #ffffff;
+      z-index: 2;
+        text-shadow: 3px 0 #51bbda, -3px 0 #51bbda, 0 3px #51bbda, 0 -3px #51bbda,
+               2px 2px #51bbda, -2px -2px #51bbda, 2px -2px #51bbda, -2px 2px #51bbda;
+}
+#musicnote{
+        position: absolute;
+      width: 2.6vw;
+      top: 60.4%;
+      left: 25.5%;   
+      transition: transform .2s ease;
+}
   </style>
 </head>
 <body>
-  <div class="gamescene">
+  <!-- <div class="gamescene">
     <img class="gamescenebottom" src="PageBackground.png">
           <div class="downloadbutton">Download</div>
           <div class="infobutton">Information</div>
-  </div>
+  </div> -->
   <div class="infoText">Check out some of my projects!</div>
   <div class="container">
     <audio id="hover" preload="auto">
@@ -431,17 +480,21 @@ transition: transform .2s;
   
   
   <div class ="popup">
-    <button id="backButton" onclick="closePopup(); playSelect();">
-      <div class="backbutton">Back</div>
-    </button>
+    <div class="popuptext">Hey! My name is Rinze and welcome to my portfolio! I'm a 19 year old Software Dev from the Netherlands. 
+
+      I work mainly in Unity C#, HTML, CSS and Javascript, but i also have experience in Python and Three.js.
+
+      In my free-time (besides coding) i love to work on video editing and graphic design, like recreating the UI's of my favorite games in Unity and animating to make everything feel polished and responsive, i find it very satisfying :).
+
+      I've got a bunch of games you can try out here so feel free to! 
+    </div>
+<div class="backbutton" onclick="closePopup(); playSelect();">Back</div>
   </div>
 
     <div class ="CVpopup">
       <div class="cvtext">This is my cv.</div>
       <img src="CV Rinze Kuizenga.png">
-    <button id="CVbackButton" onclick="closeCV(); playSelect();">
-      <div class="CVbackbutton">Back</div>
-    </button>
+<div class="CVbackbutton" onclick="closeCV(); playSelect();">Back</div>
   </div>
   
 <footer id="bottom-ui">
@@ -461,10 +514,17 @@ transition: transform .2s;
   <button id="CVButton" onclick="openCV(); playSelect();">
     <img src="CVButton.png"/>
   </button>
+  <div class="audiomanager">
+    <img id="musicnote" src="MusicNote.png">
+    <div class="audioname">Mii Maker - Nintendo</div>
+    <img id="mutebutton" src="MuteIcon.png" onclick="toggleMute(); playSelect()">
+    <img id="skipbutton" src="SkipIcon.png">
+  </div> 
 </footer>
 
-<audio autoplay loop>
-    <source src="Mii Editor - Mii Maker (Wii U) Music.mp3" type="audio/mpeg" preload="auto" >
+
+<audio id="bgmusic" loop>
+    <source src="Mii Editor - Mii Maker (Wii U) Music.mp3" type="audio/mpeg">
 </audio>
 <audio id="selectSound" preload="auto">
   <source src="SelectSound.wav" type="audio/wav">
@@ -536,4 +596,29 @@ const zoomSound = document.getElementById("zoomSound");
 zoomSound.currentTime = 0;
 zoomSound.play();
 }
+
+let hasStarted = false;
+
+function toggleMute(){
+  const music = document.getElementById("bgmusic");
+  const button = document.getElementById("mutebutton");
+
+  if(!hasStarted){
+    music.muted = false;
+    music.play();
+    hasStarted = true;
+
+    button.src = "UnmuteIcon.png";
+    return;
+  }
+
+  music.muted = !music.muted;
+
+  if(music.muted){
+    button.src = "MuteIcon.png";
+  } else {
+    button.src = "UnmuteIcon.png";
+  }
+}
+
 </script>
