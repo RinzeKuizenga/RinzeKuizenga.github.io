@@ -38,7 +38,7 @@ footer{
     #date{
       position: absolute;
       top: 49%;
-      left: 44%;
+      left: 43%;
       font-size: 3.3vw;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-weight:1000;
@@ -564,23 +564,40 @@ function closeCV(){
   //window.addEventListener("load", () => {openPopup();});
   //window.addEventListener("load", () => {openCV();});
 
-  function updateClock(){
-    const now = new Date();
-    const hours = String(now.getHours());
-    const minutes = String(now.getMinutes());
-    const ampm = now.getHours() >= 12 ? 'pm' : 'am';
+function updateClock(){
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  const ampm = hours >= 12 ? 'pm' : 'am';
 
-    document.getElementById('clock').innerHTML = `${hours} <span class="blink">:</span> ${minutes} ${ampm}`;
+  if(minutes < 10){
+    minutes = "0" + minutes;
+  }
+  else if(hours < 10){
+    hours = "0" + hours;
   }
 
-  function updateDate(){
-    const now = new Date();
-    const day = String(now.getDate());
-        const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    const dayName = dayNames[now.getDay()];
-    const month = String(now.getMonth() + 1);
-    document.getElementById('date').innerHTML = `${dayName} ${day}/${month} `;
+  document.getElementById('clock').innerHTML = 
+    `${hours} <span class="blink">:</span> ${minutes} ${ampm}`;
+}
+
+function updateDate(){
+  const now = new Date();
+
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const dayName = dayNames[now.getDay()];
+
+  let day = now.getDate();          // ✅ correct
+  let month = now.getMonth() + 1;
+
+  if (day < 10){
+    day = "0" + day;
   }
+  if(month < 10){
+    month = "0" + month;
+  }
+  document.getElementById('date').innerHTML = `${dayName} ${day}/${month}`;
+}
 updateClock();
 setInterval(updateClock, 1000);
 updateDate();
