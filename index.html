@@ -11,6 +11,7 @@
       background-repeat: repeat;
       background-size: cover;
       cursor: url(cursor1.png), auto;
+      overflow: hidden;
     }
 
     #bottom-border {
@@ -129,15 +130,19 @@ transition: transform .2s;
 
 .gamescene{
     position: absolute;
-    right: -0.6%;
-    bottom: -1%;
-    width: 98%;
-    height: 96%;
-      border: 30px solid #000000;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
       background-color: white;
-      border-radius: 2%;     
+      border-radius: 4%;     
       background-position: center;
-      z-index: 5;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+}
+.gamescene.open-popup{
+  opacity: 1;
+  pointer-events:all;
 }
 .gamescenebottom{
       position: absolute;
@@ -208,7 +213,7 @@ transition: transform .2s;
   grid-template-rows: repeat(3, 1fr);
   column-gap: 1%;
   row-gap: 2.5%;
-  left: 2.05%;
+  left: 1.80%;
   width: 85vw;
   height: 63.4vh;
   margin: 3vh auto 0 auto;
@@ -455,10 +460,30 @@ transition: transform .2s;
       left: 25.5%;   
       transition: transform .2s ease;
 }
+#blackFade{
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.4s ease;
+}
+#zoomClone{
+    position: fixed;
+  z-index: 9999;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+}
   </style>
 </head>
 <body>
-  <div class="gamescene">
+ <div class="gamescene">
     <img class="gamescenebottom" src="PageBackground.png">
           <div class="downloadbutton">Download</div>
           <div class="infobutton">Information</div>
@@ -468,7 +493,7 @@ transition: transform .2s;
     <audio id="hover" preload="auto">
       <source src="HoverSound.wav">
     </audio>
-    <div class="cell cell-1" onclick="playSelect(); playZoom();"></div>
+    <div class="cell cell-1" ></div>
     <div class ="cell cell-2"></div>
     <div class ="cell cell-3"></div>
     <div class ="cell cell-4"></div>
@@ -501,6 +526,7 @@ transition: transform .2s;
 <div class="CVbackbutton" onclick="closeCV(); playSelect();">Back</div>
   </div>
   
+  
 <footer id="bottom-ui">
 
     <img id="bottom-border" src="WiiBorder.png" />
@@ -526,6 +552,8 @@ transition: transform .2s;
   </div> 
 </footer>
 
+<div id="blackFade"></div>
+<div id="zoomClone"></div>
 
 <audio id="bgmusic" loop>
     <source src="Mii Editor - Mii Maker (Wii U) Music.mp3" type="audio/mpeg">
@@ -642,4 +670,50 @@ function toggleMute(){
   }
 }
 
+const cells = document.querySelectorAll(".cell");
+const zoomClone = document.getElementById("zoomClone");
+const blackFade = document.getElementById("blackFade");
+
+cells.forEach(cell=>{
+  cell.addEventListener("click", () => {
+    playSelect();
+    playZoom();
+    zoomToGame(cell);
+  })
+})
+
+function zoomToGame(cell){
+  const rect = cell.getBoundingClientRect();
+
+  zoomClone.style.top = rect.top + "px";
+  zoomClone.style.left = rect.left + "px";
+  zoomClone.style.width = rect.width + "px";
+  zoomClone.style.height = rect.height + "px";
+  zoomClone.style.backgroundImage = getComputedStyle(cell).backgroundImage;
+
+  zoomClone.offsetHeight;
+
+  setTimeout(() => {
+    zoomClone.classList.add("zoom-active");
+
+    zoomClone.style.top = "0";
+    zoomClone.style.left = "0";
+    zoomClone.style.width = "100vw";
+    zoomClone.style.height = "100vh";
+
+    blackFade.style.opacity = "1";
+  }, 10);
+
+setTimeout(() => {
+  const game = document.querySelector(".gamescene");
+
+  game.classList.add("open-popup");
+
+  setTimeout(() => {
+    zoomClone.style.opacity = "0"; 
+    game.style.opacity = "1";
+  }, 100);
+
+}, 350);
+}
 </script>
