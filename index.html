@@ -129,11 +129,13 @@ transition: transform .2s;
 }
 
 .gamescene{
+  cursor: url(cursor1.png), auto;
     position: absolute;
     pointer-events: none;
     width: 100%;
     height: 100%;
       background-color: white;
+      border-color: black;
       border-radius: 4%;     
       background-position: center;
       z-index: 9999;
@@ -150,6 +152,23 @@ transition: transform .2s;
     width: 100%;
     height: 20%;
     z-index: 4;
+}
+#ReturnButton{
+position: absolute;
+width: 50.4vw;
+top: 2%;
+left: -20%;
+z-index:3;
+      cursor: url(cursor1.png), auto;
+      background: none;
+      border: none;
+transition: transform 0.2s;
+}
+#ReturnButton:hover{
+  transform: scale(1.05);
+}
+#ReturnButton img{
+     width: 15%;
 }
 .infobutton{
       position: absolute;
@@ -294,10 +313,7 @@ transition: transform .2s;
 .popuptext{
   background-color: #e5e5e6;
   border-radius: 20px;
-  top:20%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  display: flex;
-  align-items: center;
 }
 .CVpopup{
     position: absolute;
@@ -479,11 +495,15 @@ transition: transform .2s;
   background-size: cover;
   background-position: center;
   transition: all 0.5s ease;
+  pointer-events: none;
 }
   </style>
 </head>
 <body>
  <div class="gamescene">
+    <button id="ReturnButton" onclick="playSelect(); playZoomOut(); zoomOutGame();">
+    <img src="BackButton.png"/>
+  </button>
     <img class="gamescenebottom" src="PageBackground.png">
           <div class="downloadbutton">Download</div>
           <div class="infobutton">Information</div>
@@ -564,6 +584,9 @@ transition: transform .2s;
 <audio id="zoomSound" preload="auto">
   <source src="EnterGameSound.wav" type="audio/wav">
 </audio>
+<audio id="zoomOutSound" preload="auto">
+  <source src="ExitGameSound.wav" type="audio/wav">
+</audio>
 
 </body>
 </html>
@@ -593,7 +616,7 @@ function closeCV(){
     CVpopup.classList.add("close-popup");
 }
 
-  //window.addEventListener("load", () => {openPopup();});
+  window.addEventListener("load", () => {openPopup();});
   //window.addEventListener("load", () => {openCV();});
 
 function updateClock(){
@@ -639,7 +662,11 @@ const selectSound = document.getElementById("selectSound");
 selectSound.currentTime = 0;
 selectSound.play();
 }
-
+function playZoomOut(){
+const selectSound = document.getElementById("zoomOutSound");
+selectSound.currentTime = 0;
+selectSound.play();
+}
 function playZoom(){
 const zoomSound = document.getElementById("zoomSound");
 zoomSound.currentTime = 0;
@@ -683,6 +710,11 @@ cells.forEach(cell=>{
 })
 
 function zoomToGame(cell){
+
+  // 🔥 reset BEFORE using it again
+  zoomClone.style.transition = "none";
+  zoomClone.style.opacity = "1";
+
   const rect = cell.getBoundingClientRect();
 
   zoomClone.style.top = rect.top + "px";
@@ -691,11 +723,12 @@ function zoomToGame(cell){
   zoomClone.style.height = rect.height + "px";
   zoomClone.style.backgroundImage = getComputedStyle(cell).backgroundImage;
 
-  zoomClone.offsetHeight;
+  zoomClone.offsetHeight; // force reflow
+
+  // restore transition
+  zoomClone.style.transition = "all 0.5s ease";
 
   setTimeout(() => {
-    zoomClone.classList.add("zoom-active");
-
     zoomClone.style.top = "0";
     zoomClone.style.left = "0";
     zoomClone.style.width = "100vw";
@@ -704,16 +737,60 @@ function zoomToGame(cell){
     blackFade.style.opacity = "1";
   }, 10);
 
-setTimeout(() => {
-  const game = document.querySelector(".gamescene");
+  setTimeout(() => {
+    const game = document.querySelector(".gamescene");
+    game.classList.add("open-popup");
 
-  game.classList.add("open-popup");
+    setTimeout(() => {
+      zoomClone.style.opacity = "0";
+    }, 100);
+
+  }, 350);
+}
+
+function zoomOutGame(){
+  const game = document.querySelector(".gamescene");
+  const activeCell = document.querySelector(".cell.active");
+
+  game.classList.remove("open-popup");
+
+  // Show clone again for animation
+  zoomClone.style.opacity = "1";
+  zoomClone.style.pointerEvents = "none";
+
+  blackFade.style.opacity = "0";
+
+  const rect = activeCell.getBoundingClientRect();
+
+  // Animate back to cell
+  zoomClone.style.top = rect.top + "px";
+  zoomClone.style.left = rect.left + "px";
+  zoomClone.style.width = rect.width + "px";
+  zoomClone.style.height = rect.height + "px";
 
   setTimeout(() => {
-    zoomClone.style.opacity = "0"; 
-    game.style.opacity = "1";
-  }, 100);
+    // 🔥 FULL RESET
+    zoomClone.style.opacity = "0";
+    zoomClone.style.top = "";
+    zoomClone.style.left = "";
+    zoomClone.style.width = "";
+    zoomClone.style.height = "";
+    zoomClone.style.backgroundImage = "";
 
-}, 350);
+    activeCell.classList.remove("active");
+  }, 500);
 }
+
+cells.forEach(cell=>{
+  cell.addEventListener("click", () => {
+    playSelect();
+    playZoom();
+
+    // mark active cell
+    document.querySelectorAll(".cell").forEach(c => c.classList.remove("active"));
+    cell.classList.add("active");
+
+    zoomToGame(cell);
+  })
+})
 </script>
