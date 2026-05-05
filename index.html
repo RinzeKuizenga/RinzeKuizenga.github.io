@@ -17,23 +17,45 @@
   </button>
     <img class="gamescenebottom" src="PageBackground.png">
           <div class="downloadbutton">Download</div>
-          <div class="infobutton">Information</div>
+          <div class="infobutton" onclick="openInfo(); playInfo();">Information</div>
   </div> 
+ <div class="Infopopup">
+  <div class="info-inner">
+
+    <div class="info-left">
+      <div class="info-title">Monkey Survivor</div>
+      <div class="info-tags">
+        <span class="tag">Unity</span>
+        <span class="tag">3D</span>
+        <span class="tag">Roguelike</span>
+        <span class="tag">Pixel Art</span>
+      </div>
+      <div class="info-description"></div>
+    </div>
+
+    <div class="info-middle-divider"></div>
+
+    <div class="info-right">
+      <img src="MonkeyScreenshot1.png" class="info-screenshot">
+      <img src="MonkeyScreenshot2.png" class="info-screenshot">
+      <img src="MonkeyScreenshot3.png" class="info-screenshot">
+    </div>
+
+  </div>
+  <div class="Infobackbutton" onclick="closeInfo(); playInfoExit();">Back</div>
+</div>
   <div class="infoText">Check out some of my projects!</div>
   <div class="container">
-    <audio id="hover" preload="auto">
-      <source src="HoverSound.wav">
-    </audio>
-    <div class="cell cell-1" ></div>
-    <div class ="cell cell-2"></div>
-    <div class ="cell cell-3"></div>
-    <div class ="cell cell-4"></div>
-    <div class ="cell cell-5"></div>
-    <div class ="cell cell-6"></div>
-    <div class ="cell cell-7"></div>
-    <div class ="cell cell-8"></div>
-    <div class ="cell cell-9"></div>
-    <div class ="cell cell-10"></div>
+    <div class="cell cell-1" data-game="monkeysurvivor"></div>
+    <div class ="cell cell-2" data-game="marijn"></div>
+    <div class ="cell cell-3" data-game="kamo"></div>
+    <div class ="cell cell-4" data-game="cadenza"></div>
+    <div class ="cell cell-5" data-game="tilted"></div>
+    <div class ="cell cell-6" data-game="phoenix"></div>
+    <div class ="cell cell-7" data-game="tanked"></div>
+    <div class ="cell cell-8" data-game="starry"></div>
+    <div class ="cell cell-9" data-game="rustbucket"></div>
+    <div class ="cell cell-10" data-game="lighting"></div>
     <div class ="cell cell-11"></div>
     <div class ="cell cell-12"></div>
   </div>
@@ -43,11 +65,11 @@
   <div class="popup-inner">
     <div class="popup-left">
       <div class="popuptext">
-        Hey! My name is Rinze and welcome to my portfolio! Maybe you recognise what I designed it after :).
+        Hey! My name is Rinze and welcome to my portfolio! <b>Maybe you recognise what I designed it after :)</b>.
         I'm a 19 year old Software Dev from the Netherlands.
-        I work mainly in Unity C#, HTML, CSS and Javascript, but I also have experience in Python and Three.js.
-        In my free-time (besides coding) I love working on video editing and graphic design; like recreating the UI's of my favorite games in Unity. I find it very satisfying :).
-        Feel free to check out my games and projects!
+        I have 3 years of experience mainly in Unity C#, HTML, CSS and Javascript, but I also have worked alot with Python and Three.js.
+        In my free-time (besides coding) I love working on video editing and graphic design; like recreating the UI's of my favorite games in Unity and animating them to be as responsive as possible. I find it very satisfying :).
+        I'm always making new stuff and putting it here so feel free to check out my games and projects!
       </div>
     </div>
     <div class="popup-divider"></div>
@@ -106,7 +128,18 @@
 <audio id="zoomOutSound" preload="auto">
   <source src="ExitGameSound.wav" type="audio/wav">
 </audio>
+<audio id="infoSound" preload="auto">
+  <source src="infobuttonSound.wav" type="audio/wav">
+</audio>
+<audio id="infoexitSound" preload="auto">
+  <source src="exitinfoSound.wav" type="audio/wav">
+</audio>
+    <audio id="hover" preload="auto">
+      <source src="HoverSound.wav">
+    </audio>
 
+<div id="overlay"></div>
+<div id="overlay2"></div>
 <script src="script.js"></script>
 </body>
 </html>

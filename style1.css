@@ -126,6 +126,8 @@ transition: transform .2s;
 
 .gamescene{
   cursor: url(cursor1.png), auto;
+  background-image: url(MarijnBackground.png);
+  background-size: cover;
     position: absolute;
     pointer-events: none;
     width: 100%;
@@ -134,7 +136,7 @@ transition: transform .2s;
       border-color: black;
       border-radius: 4%;     
       background-position: center;
-      z-index: 9999;
+      z-index: 9997;
       opacity: 0;
       transition: opacity 0.4s ease;
 }
@@ -149,23 +151,161 @@ transition: transform .2s;
     height: 20%;
     z-index: 4;
 }
-#ReturnButton{
-position: absolute;
-width: 50.4vw;
-top: 2%;
-left: -20%;
-z-index:3;
-      cursor: url(cursor1.png), auto;
-      background: none;
-      border: none;
-transition: transform 0.2s;
+.Infopopup{
+    position: absolute;
+    top: 10%;
+    left: 17%;
+    margin-top: -1%;
+    margin-left: 0%;
+    width: 65%;
+    height: 80%;
+      background-color: #f1f1f1;
+      border: 4px solid #51bbda;
+      border-radius: 2%;     
+      background-position: center;
+      z-index: 9998;
+      
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events:none;
+      background-image: url(popupBigBackground.png);      
+            background-size: cover;
 }
-#ReturnButton:hover{
+.Infobackbutton{
+    position: absolute;
+    top: 93%;
+    left: 12%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 35%;
+    height: 8.9%;
+      background-color: #ffffff;
+      border: 4px solid #51bbda;
+      border-radius: 50px;     
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.6vw;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #74747a;
+      background-image: url("ButtonBackground.png");
+      background-size: cover;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+}
+.Infobackbutton:hover{
   transform: scale(1.05);
 }
-#ReturnButton img{
-     width: 15%;
+.info-inner {
+  display: flex;
+  height: 88%;
+  padding: 3%;
+  gap: 0;
+  box-sizing: border-box;
 }
+
+.info-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-right: 4%;
+  overflow-y: auto;
+}
+
+.info-title {
+  font-family: 'Lucida Sans', sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #3b3b3b;
+  margin-bottom: 3%;
+}
+
+.info-divider {
+  border: none;
+  border-top: 3px solid #51bbda;
+  margin-bottom: 4%;
+}
+
+.info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 5%;
+}
+
+.tag {
+  background-color: #b3ddee;
+  color: white;
+  font-family: 'Lucida Sans', sans-serif;
+  font-size: 0.8vw;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 2px solid #51bbda;
+}
+
+.info-description {
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+    border: 4px solid #51bbda;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 1vw;
+  color: #3b3b3b;
+  line-height: 1.6;
+}
+
+.info-middle-divider {
+  width: 3px;
+  background-color: #51bbda;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.info-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+  padding-left: 4%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.info-screenshot {
+  max-width: 100%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 3px solid #51bbda;
+  display: block;
+}
+#ReturnButton{
+        position: absolute;
+      width: 7vw;
+      top: 82.2%;
+      left: 4%;
+      z-index: 5;
+      background: none;
+      border: none;
+      cursor: url(cursor1.png), auto;
+}
+#ReturnButton img{
+    width: 7.5vw;
+  transition: transform .2s;
+}
+#ReturnButton:hover img{
+  transform: scale(1.15);
+}
+
+
 .infobutton{
       position: absolute;
     top: 89.5%;
@@ -182,7 +322,7 @@ transition: transform 0.2s;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 250%;
+            font-size: 2.1vw;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       color: #3b3b3b;
       background-image: url("ButtonBackground.png");
@@ -210,7 +350,7 @@ transition: transform 0.2s;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 250%;
+      font-size: 2.1vw;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       color: #3b3b3b;
       background-image: url("ButtonBackground.png");
@@ -228,10 +368,10 @@ transition: transform 0.2s;
   grid-template-rows: repeat(3, 1fr);
   column-gap: 1%;
   row-gap: 2.5%;
-  left: 1.80%;
+  left: 1%;
   width: 85vw;
-  height: 63.4vh;
-  margin: 3vh auto 0 auto;
+  height: 64.4vh;
+  margin: 2.5vh auto 0 auto;
   position: relative;
 }
     .cell{
@@ -291,7 +431,7 @@ transition: transform 0.2s;
 .popup{
     position: absolute;
     top: 16%;
-    left: 26%;
+    left: 21%;
     margin-top: -1%;
     margin-left: 0%;
     width: 60%;
@@ -311,7 +451,7 @@ transition: transform 0.2s;
 }
 .popup-inner {
   display: flex;
-  height: 100%;
+  height: 90%;
   padding: 5%;
   gap: 0;
   box-sizing: border-box;
@@ -526,15 +666,49 @@ transition: transform 0.2s;
   background: black;
   opacity: 0;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 996;
   transition: opacity 0.4s ease;
 }
 #zoomClone{
     position: fixed;
-  z-index: 9999;
+  z-index: 9996;
   border-radius: 20px;
   background-size: cover;
   background-position: center;
   transition: all 0.5s ease;
   pointer-events: none;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+#overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9997;
+  transition: opacity 0.3s ease;
+}
+
+#overlay2.active {
+  opacity: 1;
+  pointer-events: auto;
 }
