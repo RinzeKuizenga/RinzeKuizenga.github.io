@@ -30,16 +30,22 @@ function closeCV(){
 
 const Infopopup = document.querySelector(".Infopopup")
 function openInfo(){
-    if (currentGameData) populateInfo(currentGameData);
-    Infopopup.classList.remove("close-popup");
-    Infopopup.classList.add("open-popup");
-      overlay2.classList.add("active");
+  if (currentGameData) populateInfo(currentGameData);
+  Infopopup.classList.remove("close-popup");
+  Infopopup.classList.add("open-popup");
+  overlay2.classList.add("active");
+
+  // Play any videos inside
+  Infopopup.querySelectorAll("video").forEach(v => v.play());
 }
 
 function closeInfo(){
-    Infopopup.classList.remove("open-popup");
-    Infopopup.classList.add("close-popup");
-      overlay2.classList.remove("active");
+  Infopopup.classList.remove("open-popup");
+  Infopopup.classList.add("close-popup");
+  overlay2.classList.remove("active");
+
+  // Pause and reset all videos
+  Infopopup.querySelectorAll("video").forEach(v => { v.pause(); v.currentTime = 0; });
 }
   window.addEventListener("load", () => {openPopup();});
   //window.addEventListener("load", () => {openCV();});
@@ -241,70 +247,87 @@ cells.forEach(cell => {
     splashImage: "MonkeySurvivorSplashgif.gif",
     title: "Monkey Survivors",
     tags: ["2024", "Unity", "2D", "Group", "Roguelike", "Bullet Hell", "Pixel-art", "Silly", "Addicting"],
-    description: "Monkey Survivors is one of the first Unity group projects i worked on, we were tasked to make a mobile game that emulates the addictive game-loop of mobile games you would find on the app store. After lots of research, testing and polishing, we were able to create a full auto-roguelike bullet hell game where you upgrade and craft items to defeat increasing waves of enemies! We were able to add alot into the game with our group-planning, we mainly made a great deal to add lots of responsive effects and sounds, which was the main reason this is one of the highest reviewed projects within our school!",
-    screenshots: ["MonkeySurvivorsScreenshot.png", "Monkey_Survivors_Trailer.mp4", "MS_screen3.png"],
+    description: `Monkey Survivors is a fast-paced mobile roguelike bullet hell focused on tight feedback, satisfying progression, and highly responsive combat. 
+    During this group project, I took a leading role in gameplay programming, feel, optimisation and art, implementing core systems such as: Player movement and combat responsiveness. 
+    
+    Enemy wave logic and object-pooling system. 
+    Visual and audio feedback systems.
+    
+    I also fully designed the UI and gameplay mechanics. I worked in Unity (C#) and focused on creating a highly polished game feel, aswell as a bunch off particle effects and sound-effects to make the game as addicting as possible. 
+    The result was one of the highest-reviewed projects in our class, largely due to its responsiveness and satisfying gameplay loop. 
+    This project significantly improved my ability to design systems that feel good, not just function correctly.`,
+    screenshots: ["Monkey Survivors Trailer.mp4"],
     },
+
     marijn:{
     splashImage: "MarijnBackground.png",
     title: "Five Nights at Marijn's",
     tags: ["2025", "Unity", "Solo", "3D", "Horror", "Ambience", "Comedy", "Fast-paced"],
-    description: "You might be wondering what you are even seeing right now, I know this looks stupid (it is) but this is actually my very first solo project I did in my own time on and off for about a year, long ago when I was young I made a small demo about my friend as the enemy in a FNAF game (I am a HUGE FNAF fan), I never finished it but promised my friend (Marijn) I would finish it when I knew how to code, after some experience in coding i went to work and fully created the game on my own, I know it looks ridiculous but it has alot going on behind the stupidness, 7 fully playable nights with different game-elements in each, a shop and upgrade system, voice acting, cutscenes, minigames, 3 different endings and ALOT more! I did everything myself including the assets (Gave me 3d-modeling experience) sound-effects and writing. This is mainly what i worked on when i had time to learn more about Unity, truly a passion project I did for fun and the sheer stupidness of it all, please check out the GameJolt page!",
-    screenshots: ["MarijnBackground.png", "MS_screen2.png", "MS_screen3.png"],
+    description: `You might be wondering what you are even seeing right now, I know this looks stupid (it is) but this is actually my very first solo project I did in my own time on and off for about a year, what started off as a joke about adding my friend into a Five Nights at Freddy's game quickly spiraled into one of my most ambitious solo projects:  7 fully playable nights with different game-elements in each, a shop and upgrade system, voice acting, cutscenes, minigames, 3 different endings and ALOT more! I did everything myself including the assets, sound-effects and writing (Which gave me experience in all elements in Game-Development). This is mainly what i worked on when i had time to learn more about Unity, truly a passion project I did for fun and the sheer stupidness of it all, please check out the GameJolt page!`,
+    screenshots: ["MarijnBackground.png", "fnafgameplay.mp4", "MarijnBackground.png"],
     },
+
     kamo:{
-    splashImage: "MarijnBackground.png",
+    splashImage: "KamoSplashgif.gif",
     title: "Kamo",
     tags: ["2024", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
-    description: "Kamo is a 2D Roguelike shooter we made for a freedom of choice project, I quickly came up with ideas to make the game engaging with gun movement, through testing we were able to make the user-experience as high as we could make it gameplay-wise. We also heavily focused on visual fidelity, as you can see we spent alot of time on pixel art and we made use of Unity's URP lighting as well as pixel-perfect camera techniques, this project was really a difficult experience as we haven't had much experience with Unity at the time, the scope is quite large with lots of upgrades and boss battles, but we were able to create what we wanted to with our planning techniques!",
+    description: `Kamo is a 2D Roguelike shooter we made for a freedom of choice project, I quickly came up with ideas to make the game engaging with gun movement, through testing I was able to make the user-experience as high as we could make it gameplay-wise. My main focus during this project was adding visual identity and high graphical fidelity to improve the user-experience. I spent alot of time on pixel art and we made use of Unity's URP lighting as well as pixel-perfect camera techniques, this project was really a difficult experience as we haven't had much experience with Unity at the time, the scope is quite large with lots of upgrades and boss battles, but we were able to create what we wanted to with our planning techniques!`,
     screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
     },
+
         cadenza:{
     splashImage: "CadenzaSplashgif.gif",
     title: "Cadenza",
     tags: ["2025", "Unity", "2D", "Rythm", "Hand-drawn Art", "Story"],
-    description: "Cadenza got 15th place out of 1156 entries in Jacksepticeye's GameJam! On the 1st of October 2025 it was announced that popular Youtube creator Jacksepticeye would host one of the biggest GameJams of the year, with 2 years of Unity experience under my belt I took up the courage to join and found a group needing Coders for their project, which with some interviewing I got accepted in! We had 3 days to create a full game under the theme (Death is an opportunity) and man, those 3 days might have been the hardest I've had to work, it was my first time in a professional Game Dev team with artists and writer so I worked 18 hours each day to finish the giant scope our game had, eventually when we published it it paid off big time, we were able to score some of the highest rating and became the 15th most popular entry in the GameJam! After the GameJam's succes the group came together and creating our new indie game team: JustATeam!",
-    screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
+    description: `Cadenza got 15th place out of 1156 entries in Jacksepticeye's GameJam. On the 1st of October 2025 it was announced that popular Youtube creator Jacksepticeye would host one of the biggest Game Jams of the year, I took up the courage to join and found a group needing Coders for their project, which with some interviewing I got accepted in as one of the primary programmers. It was my first time in a professional Game Dev team, working 18 hour days to fit the 3 day deadline. My role focused heavily on core gameplay programming aswell as UI, game-loop and debugging. I designed and created the rhythm gameplay, aswell as using S.O.L.I.D programming principles to keep up with the growing scope of the project. We eventually published and it paid off big time, we were able to score some of the highest rating and became the 15th most popular entry in the GameJam! After the GameJam's succes the group came together and creating our new indie game team: JustATeam!`,
+    screenshots: ["Cadenzaimg1.png", "Cadenzaimg2.png"],
     },
+
         tilted:{
     splashImage: "TTSplashgif.gif",
     title: "Tilted Towers",
     tags: ["2025", "Unity", "3D", "Puzzle", "Cell-Shaded", "Infinite"],
-    description: "Tilted Towers is a game we made for our quick-game project, we had to plan out, conceptualise, document and create our game within 5 days (Tanked! was part of this project too, you can check it out on the games page.), this game was actually created in 3 days, hence the smaller scope. We were tasked to make a game about gravity which we thought was perfect for a physics based tetris game where you have to build your tower as high as you can and battle the wind on your way. This was also the first time I worked Unity shader graph to create the cell-shaded art style!",
+    description: `Tilted Towers is a game we made for our rapid game-dev project, we had to plan out, conceptualise, document and create our game within 5 days, hence the smaller scope. I was tasked to create a game about using gravity for it's gameplay. The goal was to take a familiar concept and make it feel fresh through gravity based gameplay mechanics. My primary focus was learning and implementing Unity3D's Rigidbody and adding forces. Even though the development was short, this project taught me alot about rapid prototyping, scoping, and Unity's physics system.`,
     screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
     },
+
         phoenix:{
     splashImage: "RMDPSplashgif.gif",
     title: "De Ramp met de Phoenix",
     tags: ["2026", "Unity", "3D", "HDRP", "Simulator", "High-Fidelity", "Resource Management"],
-    description: "Ramp met de Phoenix is our first client oriented project, we had to create a game based on the client's educational board game with our own spin to entertain the younger audience while still learning about history. We had 9 weeks for this project so our scope was the largest we've had yet, so I locked in and learnt and added alot into the project: high definition lighting and water physics, detailed 3d-models, mini-games, resource management, UI-scripting, crew customization, immersive sound effects and a bunch more! We ended up creating a project which was highly regarded by our client, I ended up learning alot about working with clients and alot more about Unity and working in large-scale projects",
+    description: `De Ramp met de Phoenix is a large scale 3D roguelike/resource management game built in Unity, developed for a real client as our first fully client-oriented project. The goal was to turn their educational board game into an engaging game for a younger audience. With a 9 week dev cycle, this became one of the most ambitious projects I had worked on to date, both technically and in scope. It challenged me alot because it's hard to design an educational game based on the client's expectations and new features I added within Unity, I really focused myself and finding a balance between it being educational, but also engaging so it doesnt feel educational. In this project i worked alot in Unity HDRP (High Definition Render Pipeline) which helped me create realistis water and lighting physics. I also worked on reusable code compiling, I made my code as reusable as possible and made it easy to use for my other teammates, like creating UI-objects that developers can drag and drop into their scene so they don't have to develop anything themselves. Designing the UI in this project was very difficult, the game was very realistic and I wanted to find a good balance between easy to understand UI, while also making it feel complexer than it is. The final result is a polished and well-received product that was used within our client's schools. This projects taught me how to work professionally within real product constraints and larger scale projects. `,
     screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
     },
+
         tanked:{
     splashImage: "TankedSplashgif.gif",
     title: "Tanked!",
     tags: ["2025", "Unity", "2D", "Multiplayer", "Turn-based", "Multiplayer", "Strategy"],
-    description: "Tanked! is a game we made for our quick-game project, we had to plan out, conceptualise, document and create our game within 5 days (Tilted Towers was part of this project too, you can check it out on the games page.), Tanked! is a turn-based multiplayer game with lots of depth in shooting and strategy, it even has its own soundtrack! This was the first game I made in such little time, so planning was very important to us, this is truly around the time I really go into the importance of good planning and conceptualising!",
+    description: `Tanked! is a turn-based multiplayer strategy game built in Unity during a 5-day rapid development project, where planning and efficient teamwork were essential. My main focus was gameplay programming and project planning, using planning techniques like user stories and master planning, I also designed the gameplay. The shorter development timeframe meant I had to design the game based on reusing already made elements. Despite the short timeframe, we created a polished and replayable experience, teaching me valuable lessons in rapid prototyping, planning, and working efficiently under pressure.`,
     screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
     },
+
             starry:{
     splashImage: "StarrySplashgif.gif",
     title: "Starry",
     tags: ["2024", "Monogame", "2D", "Shooter", "Pixel-Art", ],
-    description: "Starry is a very basic shooter game i made within Monogame, which was my first time using it. Monogame is a way more bare-bones, difficult to use game-dev tool, in fact its not even a software, it's a framework so everything is done within your IDE. This project may be small but it caused me to think outside of the box and rely less on tools and more on myself. This really helped me shape my ways of thought while coding and skyrocketed my C# skills for the better! I also based my pixel-art to make it seem like the game is being played on a GameBoy for some visual identity!",
-    screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
+    description: `Starry is a very basic shooter game i made within Monogame, which was my first time using it. Monogame is a way more bare-bones, difficult to use game-dev tool, in fact its not even a software, it's a framework so everything is done within your IDE. This project may be small but it caused me to think outside of the box and rely less on tools and more on myself. This really helped me shape my ways of thought while coding and skyrocketed my C# skills for the better. I also based my pixel-art to make it seem like the game is being played on a GameBoy for some visual identity.`,
+    screenshots: ["StarryGamePlay.png", "MS_screen2.png", "MS_screen3.png"],
     },
+
             rustbucket:{
     splashImage: "RustBucketSplashgif.gif",
     title: "RustBucket",
     tags: ["2026", "Unity", "3D", "In-Development", "Horror", "Story"],
-    description: "Kamo is a grou",
+    description: `Rustbucket is a survival horror game project currently in development by my indie game team. While not much info has been released, I am currently working on shader creation. We are pushing for a fall 2026 release date, this game will be avaliable for purchase on Steam.`,
     screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
     },
+
             lighting:{
-    splashImage: "MarijnBackground.png",
-    title: "Kamo",
+    splashImage: "UnitySplashgif.gif",
+    title: "Lighting study",
     tags: ["2026", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
-    description: "Kamo is a grou",
+    description: `Lighting Study is a technical research project focused on improving my environmental lighting and visual presentation skills in Unity. As my games became more ambitious, I realized that strong lighting is one of the biggest factors in making a game feel professional, immersive, and visually polished, I also really enjoy working with it so I decided to specialize in it. During this project I explored Unity lighting using HDRP, baked lighting, volumetric fog, post-processing, and particle-based atmospheric effects, while also comparing Unity’s pipeline to Blender’s lighting tools. I applied these techniques directly to one of my older projects and significantly improved both its visual quality and performance which i applied into my other projects (like Het Ramp met de Phoenix). This project taught me how much visual presentation can improve gameplay and hold retention on your game.`,
     screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
     }
   };
@@ -317,6 +340,25 @@ cells.forEach(cell => {
 
   document.querySelector(".info-description").textContent = data.description;
 
-  const shots = document.querySelectorAll(".info-screenshot");
-  data.screenshots.forEach((src, i) => { if(shots[i]) shots[i].src = src; });
+  const container = document.querySelector(".info-right");
+  // Clear old screenshots/videos
+  container.querySelectorAll(".info-screenshot, .info-video").forEach(el => el.remove());
+
+  data.screenshots.forEach(src => {
+    if (src.endsWith(".mp4")) {
+      const video = document.createElement("video");
+      video.src = src;
+      video.className = "info-video";
+      video.muted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      container.appendChild(video);
+    } else {
+      const img = document.createElement("img");
+      img.src = src;
+      img.className = "info-screenshot";
+      container.appendChild(img);
+    }
+  });
 }
