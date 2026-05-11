@@ -87,33 +87,28 @@ updateClock();
 setInterval(updateClock, 60000);
 updateDate();
 
-function playSelect(){
-const selectSound = document.getElementById("selectSound");
-selectSound.currentTime = 0;
-selectSound.play();
-}
-function playZoomOut(){
-const selectSound = document.getElementById("zoomOutSound");
-selectSound.currentTime = 0;
-selectSound.play();
-}
-function playZoom(){
-const zoomSound = document.getElementById("zoomSound");
-zoomSound.currentTime = 0;
-zoomSound.play();
+const audioElements = {
+  selectSound: document.getElementById("selectSound"),
+  zoomSound: document.getElementById("zoomSound"),
+  zoomOutSound: document.getElementById("zoomOutSound"),
+  infoSound: document.getElementById("infoSound"),
+  infoexitSound: document.getElementById("infoexitSound"),
+  hoverSound: document.getElementById("hover")
+
 }
 
-function playInfo(){
-const infoSound = document.getElementById("infoSound");
-infoSound.currentTime = 0;
-infoSound.play();
+function playSound(soundKey){
+  const audio = audioElements[soundKey];
+  if(audio){
+    audio.play().catch(() => {}); 
+  }
 }
-
-function playInfoExit(){
-const infoexitSound = document.getElementById("infoexitSound");
-infoexitSound.currentTime = 0;
-infoexitSound.play();
-}
+ 
+function playSelect() { playSound('selectSound'); }
+function playZoomOut() { playSound('zoomOutSound'); }
+function playZoom() { playSound('zoomSound'); }
+function playInfo() { playSound('infoSound'); }
+function playInfoExit() { playSound('infoexitSound'); }
 
 let hasStarted = false;
 
