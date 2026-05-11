@@ -302,7 +302,7 @@ cells.forEach(cell => {
     splashImage: "StarrySplashgif.gif",
     title: "Starry",
     tags: ["2024", "Monogame", "2D", "Shooter", "Pixel-Art", ],
-    description: `Starry is a very basic shooter game i made within Monogame, which was my first time using it. Monogame is a way more bare-bones, difficult to use game-dev tool, in fact its not even a software, it's a framework so everything is done within your IDE. This project may be small but it caused me to think outside of the box and rely less on tools and more on myself. This really helped me shape my ways of thought while coding and skyrocketed my C# skills for the better. I also based my pixel-art to make it seem like the game is being played on a GameBoy for some visual identity.`,
+    description: `Starry is a very basic shooter game i made within Monogame, which was my first time using it. Monogame is a way more bare-bones difficult to use game-dev tool, in fact its not even a software it's a framework so everything is done within your IDE. This project may be small but it forced me to think outside of the box and use advanced coding techniques to calculate angles and rotations. This really helped me shape my ways of thought while coding and skyrocketed my C# skills for the better. I also based my pixel-art to make it seem like the game is being played on a GameBoy for some visual identity.`,
     screenshots: ["StarryGamePlay.png", "MS_screen2.png", "MS_screen3.png"],
     },
 
