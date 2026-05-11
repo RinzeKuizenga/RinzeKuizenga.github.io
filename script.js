@@ -263,12 +263,12 @@ cells.forEach(cell => {
     title: "Kamo",
     tags: ["2024", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
     description: `Kamo is a 2D Roguelike shooter we made for a freedom of choice project, I quickly came up with ideas to make the game engaging with gun movement, through testing I was able to make the user-experience as high as we could make it gameplay-wise. My main focus during this project was adding visual identity and high graphical fidelity to improve the user-experience. I spent alot of time on pixel art and we made use of Unity's URP lighting as well as pixel-perfect camera techniques, this project was really a difficult experience as we haven't had much experience with Unity at the time, the scope is quite large with lots of upgrades and boss battles, but we were able to create what we wanted to with our planning techniques!`,
-    screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
+    screenshots: ["KamoGameplay.mp4", "Kamoimg1.png"],
     },
 
         cadenza:{
     splashImage: "CadenzaSplashgif.gif",
-    title: "Cadenza",
+    title: "Cadenza 🏆",
     tags: ["2025", "Unity", "2D", "Rythm", "Hand-drawn Art", "Story"],
     description: `Cadenza got 15th place out of 1156 entries in Jacksepticeye's GameJam. On the 1st of October 2025 it was announced that popular Youtube creator Jacksepticeye would host one of the biggest Game Jams of the year, I took up the courage to join and found a group needing Coders for their project, which with some interviewing I got accepted in as one of the primary programmers. It was my first time in a professional Game Dev team, working 18 hour days to fit the 3 day deadline. My role focused heavily on core gameplay programming aswell as UI, game-loop and debugging. I designed and created the rhythm gameplay, aswell as using S.O.L.I.D programming principles to keep up with the growing scope of the project. We eventually published and it paid off big time, we were able to score some of the highest rating and became the 15th most popular entry in the GameJam! After the GameJam's succes the group came together and creating our new indie game team: JustATeam!`,
     screenshots: ["Cadenzaimg1.png", "Cadenzaimg2.png"],
@@ -279,7 +279,7 @@ cells.forEach(cell => {
     title: "Tilted Towers",
     tags: ["2025", "Unity", "3D", "Puzzle", "Cell-Shaded", "Infinite"],
     description: `Tilted Towers is a game we made for our rapid game-dev project, we had to plan out, conceptualise, document and create our game within 5 days, hence the smaller scope. I was tasked to create a game about using gravity for it's gameplay. The goal was to take a familiar concept and make it feel fresh through gravity based gameplay mechanics. My primary focus was learning and implementing Unity3D's Rigidbody and adding forces. Even though the development was short, this project taught me alot about rapid prototyping, scoping, and Unity's physics system.`,
-    screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
+    screenshots: ["TTimg1.png", "MS_screen2.png", "MS_screen3.png"],
     },
 
         phoenix:{
@@ -311,7 +311,7 @@ cells.forEach(cell => {
     title: "RustBucket",
     tags: ["2026", "Unity", "3D", "In-Development", "Horror", "Story"],
     description: `Rustbucket is a survival horror game project currently in development by my indie game team. While not much info has been released, I am currently working on shader creation. We are pushing for a fall 2026 release date, this game will be avaliable for purchase on Steam.`,
-    screenshots: ["MS_screen1.png", "MS_screen2.png", "MS_screen3.png"],
+    screenshots: ["Rustbucketimg1.png", "Rustbucketvid.mp4", "MS_screen3.png"],
     },
 
             lighting:{
