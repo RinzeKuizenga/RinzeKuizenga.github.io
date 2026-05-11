@@ -34,7 +34,10 @@ function openInfo(){
   Infopopup.classList.remove("close-popup");
   Infopopup.classList.add("open-popup");
   overlay2.classList.add("active");
-  Infopopup.querySelectorAll("video").forEach(v => v.play());
+Infopopup.querySelectorAll("video").forEach(v=>{
+  v.load();
+  v.play();
+});
 }
 
 function closeInfo(){
@@ -339,7 +342,7 @@ cells.forEach(cell => {
       video.className = "info-video";
       video.muted = true;
       video.loop = true;
-      video.autoplay = true;
+      video.preload = "none";
       video.playsInline = true;
       container.appendChild(video);
     } else {
