@@ -34,8 +34,6 @@ function openInfo(){
   Infopopup.classList.remove("close-popup");
   Infopopup.classList.add("open-popup");
   overlay2.classList.add("active");
-
-  // Play any videos inside
   Infopopup.querySelectorAll("video").forEach(v => v.play());
 }
 
@@ -86,7 +84,7 @@ function updateDate(){
   document.getElementById('date').innerHTML = `${dayName} ${day}/${month}`;
 }
 updateClock();
-setInterval(updateClock, 1000);
+setInterval(updateClock, 60000);
 updateDate();
 
 function playSelect(){
@@ -228,11 +226,6 @@ function zoomOutGame(){
 }
 
 cells.forEach(cell => {
-  cell.addEventListener("mouseenter", () => {
-    const hoverSound = document.getElementById("hover");
-    hoverSound.play();
-  });
-
   cell.addEventListener("click", () => {
     playSelect();
     playZoom();
@@ -264,7 +257,7 @@ cells.forEach(cell => {
     title: "Five Nights at Marijn's",
     tags: ["2025", "Unity", "Solo", "3D", "Horror", "Ambience", "Comedy", "Fast-paced"],
     description: `You might be wondering what you are even seeing right now, I know this looks stupid (it is) but this is actually my very first solo project I did in my own time on and off for about a year, what started off as a joke about adding my friend into a Five Nights at Freddy's game quickly spiraled into one of my most ambitious solo projects:  7 fully playable nights with different game-elements in each, a shop and upgrade system, voice acting, cutscenes, minigames, 3 different endings and ALOT more! I did everything myself including the assets, sound-effects and writing (Which gave me experience in all elements in Game-Development). This is mainly what i worked on when i had time to learn more about Unity, truly a passion project I did for fun and the sheer stupidness of it all, please check out the GameJolt page!`,
-    screenshots: ["MarijnBackground.png", "fnafgameplay.mp4", "MarijnBackground.png"],
+    screenshots: ["Five Nights at Marijn Official Trailer.mp4", "MarijnScreenshot1.png", "MarijnScreenshot2.png"],
     },
 
     kamo:{
