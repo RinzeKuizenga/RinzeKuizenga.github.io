@@ -155,6 +155,14 @@ const gameKey = cell.dataset.game;
 const data = gameData[gameKey];
 currentGameData = data;
 
+const downloadButton = document.getElementById("downloadButton");
+
+downloadButton.onclick = () => {
+  if (data.downloadLink){
+    window.open(data.downloadLink, "");
+  }
+};
+
 if(data){
   document.querySelector(".gamescene").style.backgroundImage = `url('${data.splashImage}')`;
 }
@@ -236,6 +244,7 @@ cells.forEach(cell => {
   const gameData = {
     monkeysurvivor:{
     splashImage: "MonkeySurvivorSplashgif.gif",
+    downloadLink: "https://schrecklock.itch.io/cadenza",
     title: "Monkey Survivors",
     tags: ["2024", "Unity", "2D", "Group", "Roguelike", "Bullet Hell", "Pixel-art", "Silly", "Addicting"],
     description: `Monkey Survivors is a fast-paced mobile roguelike bullet hell focused on tight feedback, satisfying progression, and highly responsive combat. 
@@ -252,6 +261,7 @@ cells.forEach(cell => {
 
     marijn:{
     splashImage: "MarijnBackground.png",
+    downloadLink: "https://gamejolt.com/games/FiveNightsatmarijns/902235",
     title: "Five Nights at Marijn's",
     tags: ["2025", "Unity", "Solo", "3D", "Horror", "Ambience", "Comedy", "Fast-paced"],
     description: `You might be wondering what you are even seeing right now, I know this looks stupid (it is) but this is actually my very first solo project I did in my own time on and off for about a year, what started off as a joke about adding my friend into a Five Nights at Freddy's game quickly spiraled into one of my most ambitious solo projects:  7 fully playable nights with different game-elements in each, a shop and upgrade system, voice acting, cutscenes, minigames, 3 different endings and ALOT more! I did everything myself including the assets, sound-effects and writing (Which gave me experience in all elements in Game-Development). This is mainly what i worked on when i had time to learn more about Unity, truly a passion project I did for fun and the sheer stupidness of it all, please check out the GameJolt page!`,
@@ -260,6 +270,7 @@ cells.forEach(cell => {
 
     kamo:{
     splashImage: "KamoSplashgif.gif",
+    downloadLink: "https://play.unity.com/en/games/26f5a560-8886-4f65-88a8-181877ededde/kamo",
     title: "Kamo",
     tags: ["2024", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
     description: `Kamo is a 2D Roguelike shooter we made for a freedom of choice project, I quickly came up with ideas to make the game engaging with gun movement, through testing I was able to make the user-experience as high as we could make it gameplay-wise. My main focus during this project was adding visual identity and high graphical fidelity to improve the user-experience. I spent alot of time on pixel art and we made use of Unity's URP lighting as well as pixel-perfect camera techniques, this project was really a difficult experience as we haven't had much experience with Unity at the time, the scope is quite large with lots of upgrades and boss battles, but we were able to create what we wanted to with our planning techniques!`,
@@ -268,6 +279,7 @@ cells.forEach(cell => {
 
         cadenza:{
     splashImage: "CadenzaSplashgif.gif",
+    downloadLink: "https://schrecklock.itch.io/cadenza",
     title: "Cadenza 🏆",
     tags: ["2025", "Unity", "2D", "Rythm", "Hand-drawn Art", "Story"],
     description: `Cadenza got 15th place out of 1156 entries in Jacksepticeye's GameJam. On the 1st of October 2025 it was announced that popular Youtube creator Jacksepticeye would host one of the biggest Game Jams of the year, I took up the courage to join and found a group needing Coders for their project, which with some interviewing I got accepted in as one of the primary programmers. It was my first time in a professional Game Dev team, working 18 hour days to fit the 3 day deadline. My role focused heavily on core gameplay programming aswell as UI, game-loop and debugging. I designed and created the rhythm gameplay, aswell as using S.O.L.I.D programming principles to keep up with the growing scope of the project. We eventually published and it paid off big time, we were able to score some of the highest rating and became the 15th most popular entry in the GameJam! After the GameJam's succes the group came together and creating our new indie game team: JustATeam!`,
@@ -276,6 +288,7 @@ cells.forEach(cell => {
 
         tilted:{
     splashImage: "TTSplashgif.gif",
+    downloadLink: "https://schrecklock.itch.io/cadenza",
     title: "Tilted Towers",
     tags: ["2025", "Unity", "3D", "Puzzle", "Cell-Shaded", "Infinite"],
     description: `Tilted Towers is a game we made for our rapid game-dev project, we had to plan out, conceptualise, document and create our game within 5 days, hence the smaller scope. I was tasked to create a game about using gravity for it's gameplay. The goal was to take a familiar concept and make it feel fresh through gravity based gameplay mechanics. My primary focus was learning and implementing Unity3D's Rigidbody and adding forces. Even though the development was short, this project taught me alot about rapid prototyping, scoping, and Unity's physics system.`,
@@ -284,6 +297,7 @@ cells.forEach(cell => {
 
         phoenix:{
     splashImage: "RMDPSplashgif.gif",
+    downloadLink: "https://schrecklock.itch.io/cadenza",
     title: "De Ramp met de Phoenix",
     tags: ["2026", "Unity", "3D", "HDRP", "Simulator", "High-Fidelity", "Resource Management"],
     description: `De Ramp met de Phoenix is a large scale 3D roguelike/resource management game built in Unity, developed for a real client as our first fully client-oriented project. The goal was to turn their educational board game into an engaging game for a younger audience. With a 9 week dev cycle, this became one of the most ambitious projects I had worked on to date, both technically and in scope. It challenged me alot because it's hard to design an educational game based on the client's expectations and new features I added within Unity, I really focused myself and finding a balance between it being educational, but also engaging so it doesnt feel educational. In this project i worked alot in Unity HDRP (High Definition Render Pipeline) which helped me create realistic water and lighting physics. I also worked on reusable code compiling, I made my code as reusable as possible and made it easy to use for my other teammates, like creating UI-objects that developers can drag and drop into their scene so they don't have to develop anything themselves. Designing the UI in this project was very difficult, the game was very realistic and I wanted to find a good balance between easy to understand UI, while also making it feel complexer than it is. The final result is a polished and well-received product that was used within our client's schools. This projects taught me how to work professionally within real product constraints and larger scale projects. `,
@@ -292,6 +306,7 @@ cells.forEach(cell => {
 
         tanked:{
     splashImage: "TankedSplashgif.gif",
+    downloadLink: "https://schrecklock.itch.io/cadenza",
     title: "Tanked!",
     tags: ["2025", "Unity", "2D", "Multiplayer", "Turn-based", "Multiplayer", "Strategy"],
     description: `Tanked! is a turn-based multiplayer strategy game built in Unity during a 5-day rapid development project, where planning and efficient teamwork were essential. My main focus was gameplay programming and project planning, using planning techniques like user stories and master planning, I also designed the gameplay. The shorter development timeframe meant I had to design the game based on reusing already made elements. Despite the short timeframe, we created a polished and replayable experience, teaching me valuable lessons in rapid prototyping, planning, and working efficiently under pressure.`,
@@ -300,6 +315,7 @@ cells.forEach(cell => {
 
             starry:{
     splashImage: "StarrySplashgif.gif",
+    downloadLink: "",
     title: "Starry",
     tags: ["2024", "Monogame", "2D", "Shooter", "Pixel-Art", ],
     description: `Starry is a very basic shooter game i made within Monogame, which was my first time using it. Monogame is a way more bare-bones difficult to use game-dev tool, in fact its not even a software it's a framework so everything is done within your IDE. This project may be small but it forced me to think outside of the box and use advanced coding techniques to calculate angles and rotations. This really helped me shape my ways of thought while coding and skyrocketed my C# skills for the better. I also based my pixel-art to make it seem like the game is being played on a GameBoy for some visual identity.`,
@@ -308,7 +324,8 @@ cells.forEach(cell => {
 
             rustbucket:{
     splashImage: "RustbucketSplashgif.gif",
-    title: "RustBucket",
+    downloadLink: "https://www.instagram.com/justateam_games/",
+    title: "Rustbucket",
     tags: ["2026", "Unity", "3D", "In-Development", "Horror", "Story"],
     description: `Rustbucket is a survival horror game project currently in development by my indie game team. While not much info has been released, I am currently working on shader creation. We are pushing for a fall 2026 release date, this game will be avaliable for purchase on Steam.`,
     screenshots: ["Rustbucketimg1.png", "Rustbucketvid.mp4", "MS_screen3.png"],
@@ -316,6 +333,7 @@ cells.forEach(cell => {
 
             lighting:{
     splashImage: "UnitySplashgif.gif",
+    downloadLink: "https://sway.cloud.microsoft/TiA6fXiYOHzxeHs3",
     title: "Lighting study",
     tags: ["2026", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
     description: `Lighting Study is a technical research project focused on improving my environmental lighting and visual presentation skills in Unity. As my games became more ambitious, I realized that strong lighting is one of the biggest factors in making a game feel professional, immersive, and visually polished, I also really enjoy working with it so I decided to specialize in it. During this project I explored Unity lighting using HDRP, baked lighting, volumetric fog, post-processing, and particle-based atmospheric effects, while also comparing Unity’s pipeline to Blender’s lighting tools. I applied these techniques directly to one of my older projects and significantly improved both its visual quality and performance which i applied into my other projects (like Het Ramp met de Phoenix). This project taught me how much visual presentation can improve gameplay and hold retention on your game.`,
@@ -332,7 +350,6 @@ cells.forEach(cell => {
   document.querySelector(".info-description").textContent = data.description;
 
   const container = document.querySelector(".info-right");
-  // Clear old screenshots/videos
   container.querySelectorAll(".info-screenshot, .info-video").forEach(el => el.remove());
 
   data.screenshots.forEach(src => {
