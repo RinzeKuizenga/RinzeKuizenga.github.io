@@ -454,19 +454,9 @@ cells.forEach(cell => {
     title: "How did i make this website?",
     tags: ["2026", "HTML", "CSS", "Javascript", "Three.js", "Learn it yourself!"],
     description: `
-      <p>Three.js Study is a technical research project I did focused on learning the ins and out of the Three.js library.</p>
-
-      <p>Three.js is a Javascript library used to display animated 3D objects within websites, giving you lots of flexibility in how you create websites by adding a new dimension kind of.</p>
-
-          <p>This is a 3D object rendered within your browser right now!</p>
-      <p>During this project I explored:</p>
-      <ul>
-        <li>How to render 3D objects within websites</li>
-        <li>Animating 3D objects</li>
-        <li>Using CSS to place and design 3D movement</li>
-      </ul>
+      <p>As you might have noticed I have designed my website after the Nintendo Wii's home menu, which is one of my favorite consoles/design eras</p>
     `,
-    screenshots: ["Lightingimg3.jpg", "Lightingimg1.jpg", "Lightingimg2.jpg"],
+    screenshots: ["WiiImg1.png"],
     }
   };
 
