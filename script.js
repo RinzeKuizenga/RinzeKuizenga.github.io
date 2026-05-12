@@ -264,14 +264,14 @@ cells.forEach(cell => {
     },
 
     marijn:{
-    splashImage: "MarijnBackground.png",
+    splashImage: "Marijnimg3.jpg",
     downloadLink: "https://gamejolt.com/games/FiveNightsatmarijns/902235",
     title: "Five Nights at Marijn's",
     tags: ["2025", "Unity", "Solo", "3D", "Horror", "Ambience", "Comedy", "Fast-paced"],
     description: `
       <p>You might be wondering what you are even seeing right now, I know this looks stupid (it is) but this is actually my very first solo project I did in my own time on and off for about a year.</p>
       
-      <p>What started off as a joke about adding my friend into a Five Nights at Freddy's game quickly spiraled into one of my most ambitious solo projects:</p>
+      <p>What started off as a joke about adding my friend into a Five Nights at Freddy's game quickly spiraled into one of my most ambitious solo projects because it was just too much fun to work on:</p>
       <ul>
         <li>7 fully playable nights with different game-elements in each</li>
         <li>A shop and upgrade system</li>
@@ -411,7 +411,7 @@ cells.forEach(cell => {
     title: "Lighting study",
     tags: ["2026", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
     description: `
-      <p>Lighting Study is a technical research project focused on improving my environmental lighting and visual presentation skills in Unity. As my games became more ambitious, I realized that strong lighting is one of the biggest factors in making a game feel professional, immersive, and visually polished.</p>
+      <p>Lighting Study is a technical research project I did focused on improving my environmental lighting and visual presentation skills in Unity. As my games became more ambitious, I realized that strong lighting is one of the biggest factors in making a game feel professional, immersive, and visually polished.</p>
       
       <p>During this project I explored:</p>
       <ul>
@@ -426,7 +426,30 @@ cells.forEach(cell => {
       
       <p>This project taught me how much visual presentation can improve gameplay and hold retention on your game.</p>
     `,
-    screenshots: ["Lightingimg2.jpg", "Lightingimg1.jpg", "MS_screen3.png"],
+    screenshots: ["Lightingimg3.jpg", "Lightingimg1.jpg", "Lightingimg2.jpg"],
+    },
+        three:{
+    splashImage: "ThreeSplashgif.gif",
+    downloadLink: "https://sway.cloud.microsoft/TiA6fXiYOHzxeHs3",
+    title: "Three.js Study",
+    tags: ["2024", "Three.js", "3D", "HTML", "Course"],
+    description: `
+      <p>Three.js Study is a technical research project I did focused on learning the ins and out of the Three.js library.</p>
+
+      <p>Three.js is a Javascript library used to display animated 3D objects within websites, giving you lots of flexibility in how you create websites by adding a new dimension kind of.</p>
+
+          <p>This is a 3D object rendered within your browser right now!</p>
+      <p>During this project I explored:</p>
+      <ul>
+        <li>How to render 3D objects within websites</li>
+        <li>Animating 3D objects</li>
+        <li>Using CSS to place and design 3D movement</li>
+      </ul>
+      
+
+      
+    `,
+    screenshots: ["Lightingimg3.jpg", "Lightingimg1.jpg", "Lightingimg2.jpg"],
     }
   };
 
