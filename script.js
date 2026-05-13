@@ -27,6 +27,20 @@ function closeCV(){
     overlay.classList.remove("active");
 }
 
+let teampopup = document.querySelector(".teampopup");
+
+function openA(){
+  teampopup.classList.remove("close-popup");
+  teampopup.classList.add("open-popup");
+  overlay.classList.add("active");
+}
+
+function closeA(){
+  teampopup.classList.remove("open-popup");
+  teampopup.classList.add("close-popup");
+  overlay.classList.remove("active");
+}
+
 const Infopopup = document.querySelector(".Infopopup")
 function openInfo(){
   if (currentGameData) populateInfo(currentGameData);
@@ -438,7 +452,6 @@ cells.forEach(cell => {
 
       <p>Three.js is a Javascript library used to display animated 3D objects within websites, giving you lots of flexibility in how you create websites by adding a new dimension kind of.</p>
 
-          <p>This is a 3D object rendered within your browser right now!</p>
       <p>During this project I explored:</p>
       <ul>
         <li>How to render 3D objects within websites</li>
@@ -446,17 +459,23 @@ cells.forEach(cell => {
         <li>Using CSS to place and design 3D movement</li>
       </ul>
     `,
-    screenshots: ["Lightingimg3.jpg", "Lightingimg1.jpg", "Lightingimg2.jpg"],
+    screenshots: ["ThreeImg1.png"],
     },
             wii:{
     splashImage: "WiiSplashgif.gif",
-    downloadLink: "https://sway.cloud.microsoft/TiA6fXiYOHzxeHs3",
-    title: "How did i make this website?",
+    downloadLink: "rinzekuizenga.github.io",
+    title: "Why and how did i make this website?.",
     tags: ["2026", "HTML", "CSS", "Javascript", "Three.js", "Learn it yourself!"],
     description: `
       <p>As you might have noticed I have designed my website after the Nintendo Wii's home menu, which is one of my favorite consoles/design eras</p>
+      <p>My original portfolio website was a little more proffesional but I wanted to create my new one based on what I love, which happens to be the thing I do.</p<
+      <p>The reason I chose this to represent me is because the Wii might just be the thing that kick-started my love for coding/creating games and designing UI. The Wii was my first step into that landscape when I was just 4 years old and I became obsessed ever since.</p>
+      <p>I used a hand-full of techniques to make my UI as accurate as possible to the Wii:</p>
+      <li>I ripped audio files from the Wii menu and accurately used them in my website.</li>
+      <li>Learned Javascript animations to enhance user-experience.</li>
+      <li>Also the website became very heavy due to the sheer amount of assets and animations i put in so I used lazy loading and reusable components to make sure it lagged less.</li>
     `,
-    screenshots: ["WiiImg1.png"],
+    screenshots: ["WiiImg1.png", "WiiImg2.png"],
     }
   };
 
