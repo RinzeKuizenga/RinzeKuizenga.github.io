@@ -397,7 +397,7 @@ z-index:3;
 }
     .cell{
       background-color: #dfdfdf;
-      border: 4px solid #979797;
+      border: 0.2vw solid #979797;
       border-radius: 20px;   
       background-position: center;
       transition: transform .2s;
@@ -547,9 +547,9 @@ z-index:3;
             background-size: cover;
 }
 .CVpopup img{
-  width: 50%;
+  width: 48%;
   position: absolute;
-  left: 27%;
+  left: 25%;
   top: 3.4%;
   border: 5px solid #51bbda;
   border-radius: 20px;
@@ -563,14 +563,14 @@ z-index:3;
     width: 35%;
     height: 8.9%;
       background-color: #ffffff;
-      border: 4px solid #51bbda;
+      border: 0.2vw solid #51bbda;
       border-radius: 50px;     
       z-index: 4;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 200%;
+      font-size: 1.6vw;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       color: #74747a;
       background-image: url("ButtonBackground.png");
@@ -586,7 +586,7 @@ z-index:3;
 .CVbackbutton{
     position: absolute;
     top: 93%;
-    left: 40%;
+    left: 18%;
     margin-top: -50px;
     margin-left: -50px;
     width: 35%;
@@ -612,10 +612,10 @@ z-index:3;
 }
 .teampopup{
   position: absolute;
-  top: 16%;
+  top: 10%;
   left: 30%;
   width: 40%;
-  height: 70%;
+  height: 80%;
   background-color: #f1f1f1;
   border: 4px solid #51bbda;
   border-radius: 2%;
@@ -640,10 +640,9 @@ z-index:3;
 }
 
 .team-image{
-  width: 40%;
+  width: 50%;
   height: 20%;
   object-fit: cover;
-  border: 4px solid #51bbda;
   border-radius: 20px;
   display: block;
   margin: 1% auto;
@@ -651,7 +650,7 @@ z-index:3;
 
 .teamtext{
   width: 80%;
-  height: 45%;   
+  height: 50%;   
   margin: auto;
   padding: 1rem;
 
@@ -815,4 +814,143 @@ z-index:3;
   justify-content: center;
   gap: 8px;
   margin: 20px 0;
+}
+
+#LinkedInButton{
+    position: absolute;
+    top: 92%;
+    left: 60%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 7%;
+    height: 10%;    
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+      background: none;
+      border: none;
+}
+
+#LinkedInButton:hover{
+  transform: scale(1.05);
+}
+
+#LinkedInButton img{
+  width: 80%;
+}
+
+#GithubButton{
+    position: absolute;
+    top: 92%;
+    left: 70%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 7%;
+    height: 10%;    
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+      background: none;
+      border: none;
+}
+
+#GithubButton:hover{
+  transform: scale(1.05);
+}
+
+#GithubButton img{
+  width: 80%;
+}
+
+#YoutubeButton{
+    position: absolute;
+    top: 92%;
+    left: 80%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 7%;
+    height: 10%;    
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+      background: none;
+      border: none;
+}
+
+#YoutubeButton:hover{
+  transform: scale(1.05);
+}
+
+#YoutubeButton img{
+  width: 80%;
+}
+
+#InstaButton{
+    position: absolute;
+    top: 92%;
+    left: 90%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 7%;
+    height: 10%;    
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: url(cursor1.png), auto;
+      transition: transform .2s;
+      background: none;
+      border: none;
+}
+
+#InstaButton:hover{
+  transform: scale(1.05);
+}
+
+#InstaButton img{
+  width: 80%;
+}
+
+.EmailButton{
+    position: absolute;
+    top: 93%;
+    left: 62%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 36%;
+    height: 10%;
+    border: 4px solid #51bbda;
+    border-radius: 50px;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 1.6vw;
+    font-family: 'Lucida Sans', sans-serif;
+    color: white;
+
+    background-color: #b4ddef;
+    background-size: cover;
+
+    cursor: url(cursor1.png), auto;
+    transition: transform .2s;
+    text-decoration: none;
+            text-shadow: 3px 0 #51bbda, -3px 0 #51bbda, 0 3px #51bbda, 0 -3px #51bbda,
+               2px 2px #51bbda, -2px -2px #51bbda, 2px -2px #51bbda, -2px 2px #51bbda;
+}
+
+.EmailButton:hover{
+    transform: scale(1.05);
 }

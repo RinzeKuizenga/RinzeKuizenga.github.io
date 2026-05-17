@@ -58,7 +58,6 @@ function closeInfo(){
   Infopopup.classList.add("close-popup");
   overlay2.classList.remove("active");
 
-  // Pause and reset all videos
   Infopopup.querySelectorAll("video").forEach(v => { v.pause(); v.currentTime = 0; });
 }
   window.addEventListener("load", () => {openPopup();});
@@ -88,7 +87,7 @@ function updateDate(){
   const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const dayName = dayNames[now.getDay()];
 
-  let day = now.getDate();          // ✅ correct
+  let day = now.getDate();         
   let month = now.getMonth() + 1;
 
   if (day < 10){
@@ -272,9 +271,9 @@ cells.forEach(cell => {
       
       <p>I also fully designed the UI and gameplay mechanics. I worked in Unity (C#) and focused on creating a highly polished game feel, as well as a bunch of particle effects and sound-effects to make the game as addicting as possible.</p>
       
-      <p>The result was one of the highest-reviewed projects in our class, largely due to its responsiveness and satisfying gameplay loop. This project significantly improved my ability to design systems that feel good, not just function correctly.</p>
+      <p>The result was one of the highest-reviewed projects in our class, largely due to its scope and polish.</p>
     `,
-    screenshots: ["Monkey Survivors Trailer.mp4"],
+    screenshots: ["Monkey Survivors Trailer.mp4","MonkeySurvivorsScreenshot.png"],
     },
 
     marijn:{
@@ -464,7 +463,7 @@ cells.forEach(cell => {
             wii:{
     splashImage: "WiiSplashgif.gif",
     downloadLink: "rinzekuizenga.github.io",
-    title: "Why and how did i make this website?.",
+    title: "Why and how did i make this website?",
     tags: ["2026", "HTML", "CSS", "Javascript", "Three.js", "Learn it yourself!"],
     description: `
       <p>As you might have noticed I have designed my website after the Nintendo Wii's home menu, which is one of my favorite consoles/design eras</p>
