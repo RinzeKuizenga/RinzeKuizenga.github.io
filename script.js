@@ -62,7 +62,7 @@ function closeInfo(){
 }
   window.addEventListener("load", () => {openPopup();});
   //window.addEventListener("load", () => {openCV();});
-  window.addEventListener("load", () => {toggleMute();});
+  //window.addEventListener("load", () => {toggleMute();});
 
 function updateClock(){
   const now = new Date();
@@ -129,22 +129,21 @@ function playTeamOpen() { playSound('TeamOpenSound'); }
 
 let hasStarted = false;
 
-function toggleMute(){
+function toggleMute() {
   const music = document.getElementById("bgmusic");
   const button = document.getElementById("mutebutton");
 
-  if(!hasStarted){
+  if (!hasStarted) {
     music.muted = false;
-    music.play();
+    music.play().catch(() => {});
     hasStarted = true;
-
     button.src = "UnmuteIcon.png";
     return;
   }
 
   music.muted = !music.muted;
 
-  if(music.muted){
+  if (music.muted) {
     button.src = "MuteIcon.png";
   } else {
     button.src = "UnmuteIcon.png";
