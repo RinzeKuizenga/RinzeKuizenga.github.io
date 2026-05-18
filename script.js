@@ -256,7 +256,7 @@ cells.forEach(cell => {
   const gameData = {
     monkeysurvivor:{
     splashImage: "MonkeySurvivorSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "Monkey Survivors",
     tags: ["2024", "Unity", "2D", "Group", "Roguelike", "Bullet Hell", "Pixel-art", "Silly", "Addicting"],
     description: `
@@ -341,7 +341,7 @@ cells.forEach(cell => {
 
     tilted:{
     splashImage: "TTSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "Tilted Towers",
     tags: ["2025", "Unity", "3D", "Puzzle", "Cell-Shaded", "Infinite"],
     description: `
@@ -356,7 +356,7 @@ cells.forEach(cell => {
 
     phoenix:{
     splashImage: "RMDPSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "De Ramp met de Phoenix",
     tags: ["2026", "Unity", "3D", "HDRP", "Simulator", "High-Fidelity", "Resource Management"],
     description: `
@@ -377,7 +377,7 @@ cells.forEach(cell => {
 
     tanked:{
     splashImage: "TankedSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "Tanked!",
     tags: ["2025", "Unity", "2D", "Multiplayer", "Turn-based", "Strategy"],
     description: `
