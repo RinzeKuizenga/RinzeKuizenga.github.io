@@ -108,7 +108,8 @@ const audioElements = {
   zoomOutSound: document.getElementById("zoomOutSound"),
   infoSound: document.getElementById("infoSound"),
   infoexitSound: document.getElementById("infoexitSound"),
-  hoverSound: document.getElementById("hover")
+  hoverSound: document.getElementById("hover"),
+  TeamOpenSound: document.getElementById("TeamOpenSound")
 
 }
 
@@ -124,6 +125,7 @@ function playZoomOut() { playSound('zoomOutSound'); }
 function playZoom() { playSound('zoomSound'); }
 function playInfo() { playSound('infoSound'); }
 function playInfoExit() { playSound('infoexitSound'); }
+function playTeamOpen() { playSound('TeamOpenSound'); }
 
 let hasStarted = false;
 
