@@ -62,7 +62,7 @@ function closeInfo(){
 }
   window.addEventListener("load", () => {openPopup();});
   //window.addEventListener("load", () => {openCV();});
-  window.addEventListener("load", () => {toggleMute();});
+  //window.addEventListener("load", () => {toggleMute();});
 
 function updateClock(){
   const now = new Date();
@@ -108,7 +108,8 @@ const audioElements = {
   zoomOutSound: document.getElementById("zoomOutSound"),
   infoSound: document.getElementById("infoSound"),
   infoexitSound: document.getElementById("infoexitSound"),
-  hoverSound: document.getElementById("hover")
+  hoverSound: document.getElementById("hover"),
+  TeamOpenSound: document.getElementById("TeamOpenSound")
 
 }
 
@@ -124,25 +125,25 @@ function playZoomOut() { playSound('zoomOutSound'); }
 function playZoom() { playSound('zoomSound'); }
 function playInfo() { playSound('infoSound'); }
 function playInfoExit() { playSound('infoexitSound'); }
+function playTeamOpen() { playSound('TeamOpenSound'); }
 
 let hasStarted = false;
 
-function toggleMute(){
+function toggleMute() {
   const music = document.getElementById("bgmusic");
   const button = document.getElementById("mutebutton");
 
-  if(!hasStarted){
+  if (!hasStarted) {
     music.muted = false;
-    music.play();
+    music.play().catch(() => {});
     hasStarted = true;
-
     button.src = "UnmuteIcon.png";
     return;
   }
 
   music.muted = !music.muted;
 
-  if(music.muted){
+  if (music.muted) {
     button.src = "MuteIcon.png";
   } else {
     button.src = "UnmuteIcon.png";
@@ -256,7 +257,7 @@ cells.forEach(cell => {
   const gameData = {
     monkeysurvivor:{
     splashImage: "MonkeySurvivorSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "Monkey Survivors",
     tags: ["2024", "Unity", "2D", "Group", "Roguelike", "Bullet Hell", "Pixel-art", "Silly", "Addicting"],
     description: `
@@ -341,7 +342,7 @@ cells.forEach(cell => {
 
     tilted:{
     splashImage: "TTSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "Tilted Towers",
     tags: ["2025", "Unity", "3D", "Puzzle", "Cell-Shaded", "Infinite"],
     description: `
@@ -356,7 +357,7 @@ cells.forEach(cell => {
 
     phoenix:{
     splashImage: "RMDPSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "De Ramp met de Phoenix",
     tags: ["2026", "Unity", "3D", "HDRP", "Simulator", "High-Fidelity", "Resource Management"],
     description: `
@@ -377,7 +378,7 @@ cells.forEach(cell => {
 
     tanked:{
     splashImage: "TankedSplashgif.gif",
-    downloadLink: "https://schrecklock.itch.io/cadenza",
+    downloadLink: "",
     title: "Tanked!",
     tags: ["2025", "Unity", "2D", "Multiplayer", "Turn-based", "Strategy"],
     description: `
