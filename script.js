@@ -261,11 +261,11 @@ cells.forEach(cell => {
     title: "Monkey Survivors",
     tags: ["2024", "Unity", "2D", "Group", "Roguelike", "Bullet Hell", "Pixel-art", "Silly", "Addicting"],
     description: `
-      <p>Monkey Survivors is a fast-paced mobile roguelike bullet hell focused on tight feedback, satisfying progression, and highly responsive combat.</p>
+      <p>Monkey Survivors is a fast-paced mobile roguelike bullet hell focused on tight feedback, satisfying progression, and lots of items.</p>
       
-      <p>During this group project, I took a leading role in gameplay programming, feel, optimisation and art, implementing core systems such as:</p>
+      <p>During this group project, I took a leading role in gameplay programming, feel, optimisation and art, implementing systems such as:</p>
       <ul>
-        <li>Player movement and combat responsiveness</li>
+        <li>Player movement and game-feel</li>
         <li>Enemy wave logic and object-pooling system</li>
         <li>Visual and audio feedback systems</li>
       </ul>
