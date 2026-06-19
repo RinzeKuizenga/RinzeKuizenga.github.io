@@ -443,23 +443,26 @@ cells.forEach(cell => {
     screenshots: ["Lightingimg3.jpg", "Lightingimg1.jpg", "Lightingimg2.jpg"],
     },
         three:{
-    splashImage: "ThreeSplashgif.gif",
+    splashImage: "RPGSplashgif.gif",
     downloadLink: "https://sway.cloud.microsoft/TiA6fXiYOHzxeHs3",
-    title: "Three.js Study",
-    tags: ["2024", "Three.js", "3D", "HTML", "Course"],
+    title: "Lootlash",
+    tags: ["2026", "Unity", "2D", "C#", "RPG", "Fast-Paced", "S.O.L.I.D"],
     description: `
-      <p>Three.js Study is a technical research project I did focused on learning the ins and out of the Three.js library.</p>
+      <p>Lootlash is a quick RPG Roguelike demo game I made within Unity to learn about S.O.L.I.D programming principles and learning to code using reusable components.</p>
 
-      <p>Three.js is a Javascript library used to display animated 3D objects within websites, giving you lots of flexibility in how you create websites by adding a new dimension kind of.</p>
+      <p>I based my project on turn-based action-RPGs from my childhood, I chose this style because it fitted the "Reusable Components" rules perfectly. I had to code certain systems in a way that I reuse over and over with loose-coupeling so it's easier to keep track of the project and expand it. This project truly skyrocketed my train of thought when coding. It's not just about knowing what you can write, it's also about writing in a way that makes it efficiënt and easier upon yourself. </p>
 
       <p>During this project I explored:</p>
       <ul>
-        <li>How to render 3D objects within websites</li>
-        <li>Animating 3D objects</li>
-        <li>Using CSS to place and design 3D movement</li>
+        <li>Using S.O.L.I.D programming principles</li>
+        <li>Creating algorithms and code that works efficiëntly on it's own.</li>
+        <li>Building larger scale projects that are easier to manage using said programming principles.</li>
       </ul>
+
+      <p> Code Example ---><p>
+      <p> Using loose system and event within other scripts to efficiently run and organize code.<p>
     `,
-    screenshots: ["ThreeImg1.png"],
+    screenshots: ["RPGVideo.mp4", "RPGImg1.png", "RPGImg.png"],
     },
             wii:{
     splashImage: "WiiSplashgif.gif",
