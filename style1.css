@@ -406,51 +406,51 @@ z-index:3;
       align-items: center;
     }
     .cell-1{
-      background-image: url("MonkeySurvivorSplashgif.gif");
+      background-image: url("MonkeySurvivorSplashgif.webp");
       background-size: cover;
     }
     .cell-2{
-      background-image: url("MarijnSplashgif.gif");
+      background-image: url("MarijnSplashgif.webp");
       background-size: cover;
     }
     .cell-3{
-      background-image: url("KamoSplashgif.gif");
+      background-image: url("KamoSplashgif.webp");
       background-size: cover;
     }
     .cell-4{
-      background-image: url("CadenzaSplashgif.gif");
+      background-image: url("CadenzaSplashgif.webp");
       background-size: cover;
     }
     .cell-5{
-      background-image: url("TTSplashgif.gif");
+      background-image: url("TTSplashgif.webp");
       background-size: cover;
     }
       .cell-6{
-      background-image: url("RMDPSplashgif.gif");
+      background-image: url("RMDPSplashgif.webp");
       background-size: cover;
     }
           .cell-7{
-      background-image: url("TankedSplashgif.gif");
+      background-image: url("TankedSplashgif.webp");
       background-size: cover;
     }
               .cell-8{
-      background-image: url("StarrySplashgif.gif");
+      background-image: url("StarrySplashgif.webp");
       background-size: 20%;
       background-size: cover;
     }
                   .cell-9{
-      background-image: url("RustbucketSplashgif.gif");
+      background-image: url("RustbucketSplashgif.webp");
       background-size: cover;
     }                  .cell-10{
-      background-image: url("UnitySplashgif.gif");
+      background-image: url("UnitySplashgif.webp");
       background-size: cover;
     }
     .cell-11{
-      background-image: url("ThreeSplashgif.gif");
+      background-image: url("ThreeSplashgif.webp");
       background-size: cover;
     }
         .cell-12{
-      background-image: url("WiiSplashgif.gif");
+      background-image: url("WiiSplashgif.webp");
       background-size: cover;
     }
     .cell:hover{
