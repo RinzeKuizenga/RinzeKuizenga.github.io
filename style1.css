@@ -150,11 +150,11 @@ z-index:3;
   background-size: cover;
     position: absolute;
     pointer-events: none;
-    width: 100%;
+    width: 100;
     height: 100%;
       background-color: white;
       border-color: black;
-      border-radius: 4%;     
+      border-radius: 3vw;     
       background-position: center;
       z-index: 9997;
       opacity: 0;
@@ -180,8 +180,8 @@ z-index:3;
     width: 65%;
     height: 80%;
       background-color: #f1f1f1;
-      border: 4px solid #51bbda;
-      border-radius: 2%;     
+      border: 0.4vw solid #51bbda;
+      border-radius: 2vw;     
       background-position: center;
       z-index: 9998;
       
@@ -336,8 +336,8 @@ z-index:3;
     width: 24%;
     height: 11%;
       background-color: #ffffff;
-      border: 4px solid #51bbda;
-      border-radius: 50px;     
+      border: 0.2vw solid #51bbda;
+      border-radius: 5vw;     
       z-index: 4;
       display: flex;
       align-items: center;
@@ -364,8 +364,8 @@ z-index:3;
     width: 24%;
     height: 11%;
       background-color: #ffffff;
-      border: 4px solid #51bbda;
-      border-radius: 50px;     
+      border: 0.2vw solid #51bbda;
+      border-radius: 5vw;     
       z-index: 4;
       display: flex;
       align-items: center;
@@ -398,7 +398,7 @@ z-index:3;
     .cell{
       background-color: #dfdfdf;
       border: 0.2vw solid #979797;
-      border-radius: 20px;   
+      border-radius: 1.5vw;   
       background-position: center;
       transition: transform .2s;
       display: flex;
@@ -446,7 +446,7 @@ z-index:3;
       background-size: cover;
     }
     .cell-11{
-      background-image: url("RPGSplashGif.gif");
+      background-image: url("ThreeSplashgif.gif");
       background-size: cover;
     }
         .cell-12{
@@ -466,7 +466,7 @@ z-index:3;
     width: 60%;
     height: 70%;
       background-color: #f1f1f1;
-      border: 4px solid #51bbda;
+      border: 0.3vw solid #51bbda;
       border-radius: 2%;     
       background-position: center;
       z-index: 4;
@@ -496,20 +496,20 @@ z-index:3;
 
 .popuptext {
   background-color: #e0e0e2;
-  border-radius: 20px;
+  border-radius: 0.9vw;
   padding: 1rem 1.2rem;
-    border: 4px solid #51bbda;
+    border: 0.3vw solid #51bbda;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   font-size: 0.93vw;
   color: #3b3b3b;
-  line-height: 1.6;
+  line-height: 1.6vw;
 }
 
 .popup-divider {
-  width: 3px;
+  width: 0.3vw;
   background-color: #51bbda;
-  border-radius: 3px;
+  border-radius: 3vw;
   flex-shrink: 0;
 }
 
@@ -565,7 +565,7 @@ z-index:3;
     height: 8.9%;
       background-color: #ffffff;
       border: 0.2vw solid #51bbda;
-      border-radius: 50px;     
+      border-radius: 10vw;     
       z-index: 4;
       display: flex;
       align-items: center;
