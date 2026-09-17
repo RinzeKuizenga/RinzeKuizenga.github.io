@@ -525,6 +525,14 @@ z-index:3;
   object-fit: cover;
   border-radius: 10px;
 }
+#RinzeRender{
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  width: 50%;
+  object-fit: cover;
+  z-index: 2;
+}
 .CVpopup{
     position: absolute;
     top: 10%;

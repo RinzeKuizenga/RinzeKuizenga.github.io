@@ -256,7 +256,7 @@ cells.forEach(cell => {
 
   const gameData = {
     monkeysurvivor:{
-    splashImage: "MonkeySurvivorSplashgif.gif",
+    splashImage: "MonkeySurvivorSplashgif.webp",
     downloadLink: "",
     title: "Monkey Survivors",
     tags: ["2024", "Unity", "2D", "Group", "Roguelike", "Bullet Hell", "Pixel-art", "Silly", "Addicting"],
@@ -300,7 +300,7 @@ cells.forEach(cell => {
     },
 
     kamo:{
-    splashImage: "KamoSplashgif.gif",
+    splashImage: "KamoSplashgif.webp",
     downloadLink: "https://play.unity.com/en/games/26f5a560-8886-4f65-88a8-181877ededde/kamo",
     title: "Kamo",
     tags: ["2024", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
@@ -317,7 +317,7 @@ cells.forEach(cell => {
     },
 
     cadenza:{
-    splashImage: "CadenzaSplashgif.gif",
+    splashImage: "CadenzaSplashgif.webp",
     downloadLink: "https://schrecklock.itch.io/cadenza",
     title: "Cadenza 🏆",
     tags: ["2025", "Unity", "2D", "Rythm", "Hand-drawn Art", "Story"],
@@ -341,7 +341,7 @@ cells.forEach(cell => {
     },
 
     tilted:{
-    splashImage: "TTSplashgif.gif",
+    splashImage: "TTSplashgif.webp",
     downloadLink: "",
     title: "Tilted Towers",
     tags: ["2025", "Unity", "3D", "Puzzle", "Cell-Shaded", "Infinite"],
@@ -356,7 +356,7 @@ cells.forEach(cell => {
     },
 
     phoenix:{
-    splashImage: "RMDPSplashgif.gif",
+    splashImage: "RMDPSplashgif.webp",
     downloadLink: "",
     title: "De Ramp met de Phoenix",
     tags: ["2026", "Unity", "3D", "HDRP", "Simulator", "High-Fidelity", "Resource Management"],
@@ -377,7 +377,7 @@ cells.forEach(cell => {
     },
 
     tanked:{
-    splashImage: "TankedSplashgif.gif",
+    splashImage: "TankedSplashgif.webp",
     downloadLink: "",
     title: "Tanked!",
     tags: ["2025", "Unity", "2D", "Multiplayer", "Turn-based", "Strategy"],
@@ -392,7 +392,7 @@ cells.forEach(cell => {
     },
 
     starry:{
-    splashImage: "StarrySplashgif.gif",
+    splashImage: "StarrySplashgif.webp",
     downloadLink: "",
     title: "Starry",
     tags: ["2024", "Monogame", "2D", "Shooter", "Pixel-Art"],
@@ -407,7 +407,7 @@ cells.forEach(cell => {
     },
 
     rustbucket:{
-    splashImage: "RustbucketSplashgif.gif",
+    splashImage: "RustbucketSplashgif.webp",
     downloadLink: "https://www.instagram.com/justateam_games/",
     title: "Rustbucket",
     tags: ["2026", "Unity", "3D", "In-Development", "Horror", "Story"],
@@ -420,7 +420,7 @@ cells.forEach(cell => {
     },
 
     lighting:{
-    splashImage: "UnitySplashgif.gif",
+    splashImage: "UnitySplashgif.webp",
     downloadLink: "https://sway.cloud.microsoft/TiA6fXiYOHzxeHs3",
     title: "Lighting study",
     tags: ["2026", "Unity", "2D", "Shooter", "Pixel-Art", "URP", "Fast-paced"],
@@ -443,7 +443,7 @@ cells.forEach(cell => {
     screenshots: ["Lightingimg3.jpg", "Lightingimg1.jpg", "Lightingimg2.jpg"],
     },
 three:{
-    splashImage: "ThreeSplashgif.gif",
+    splashImage: "ThreeSplashgif.webp",
     downloadLink: "https://sway.cloud.microsoft/TiA6fXiYOHzxeHs3",
     title: "Three.js Study",
     tags: ["2024", "Three.js", "3D", "HTML", "Course"],
@@ -462,7 +462,7 @@ three:{
     screenshots: ["Threeimg1.png"],
     },
             wii:{
-    splashImage: "WiiSplashgif.gif",
+    splashImage: "WiiSplashgif.webp",
     downloadLink: "rinzekuizenga.github.io",
     title: "Why and how did i make this website?",
     tags: ["2026", "HTML", "CSS", "Javascript", "Three.js", "Learn it yourself!"],
