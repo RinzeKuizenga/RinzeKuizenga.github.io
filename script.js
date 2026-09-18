@@ -397,7 +397,7 @@ cells.forEach(cell => {
     title: "Starry",
     tags: ["2024", "Monogame", "2D", "Shooter", "Pixel-Art"],
     description: `
-      <p>Starry is a very basic shooter game I made within Monogame, which was my first time using it. Monogame is a way more bare-bones, difficult to use game-dev tool. In fact, it's not even software—it's a framework—so everything is done within your IDE.</p>
+      <p>Starry is a very basic shooter game I made within Monogame, which was my first time using it. Monogame is a way more bare-bones, difficult to use game-dev tool. In fact, it's not even software, it's a framework so everything is done within your IDE.</p>
       
       <p>This project may be small, but it forced me to think outside the box and use advanced coding techniques to calculate angles and rotations. This really helped me shape my ways of thought while coding and skyrocketed my C# skills for the better.</p>
       
