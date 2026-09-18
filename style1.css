@@ -45,9 +45,9 @@ footer{
     }
     #MiiPhoto{
       position: absolute;
-      width: 10vw;
-      top: -12%;
-      left: 69%;
+      width: 30vw;
+      top: -60%;
+      left: 58%;
       z-index: 100000;
       transition: transform .2s ease;
     }
@@ -151,11 +151,11 @@ z-index:3;
   background-size: cover;
     position: absolute;
     pointer-events: none;
+    top: 60%;
+    left: 50%;
     width: 100%;
     height: 100%;
-      background-color: white;
-      border-color: black;
-      border-radius: 3vw;     
+      background-color: white;   
       background-position: center;
       z-index: 9997;
       opacity: 0;
@@ -174,15 +174,17 @@ z-index:3;
 }
 .Infopopup{
     position: absolute;
-    top: 10%;
-    left: 17%;
+    width: min(1500px, 80vw);
+    height: min(1200px, 75vh);
+
+    left: 50%;
+    top: 55%;
+
     margin-top: -1%;
     margin-left: 0%;
-    width: 65%;
-    height: 80%;
       background-color: #f1f1f1;
-      border: 0.4vw solid #51bbda;
-      border-radius: 2vw;     
+      border: 0.6em solid #51bbda;
+      border-radius: 2em;     
       background-position: center;
       z-index: 9998;
       
@@ -195,12 +197,10 @@ z-index:3;
 }
 .Infobackbutton{
     position: absolute;
-    top: 93%;
-    left: 12%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 35%;
-    height: 8.9%;
+bottom: 6%;
+    left: 9%;
+    width: 30%;
+    height: 10%;
       background-color: #ffffff;
       border: 4px solid #51bbda;
       border-radius: 50px;     
@@ -209,7 +209,7 @@ z-index:3;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 1.6vw;
+            font-size: clamp(20px, 1.2vw, 50px);
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       color: #74747a;
       background-image: url("ButtonBackground.png");
@@ -238,7 +238,7 @@ z-index:3;
 
 .info-title {
   font-family: 'Lucida Sans', sans-serif;
-  font-size: 2vw;
+        font-size: clamp(35px, 1.2vw, 50px);
   font-weight: bold;
   color: #3b3b3b;
   margin-bottom: 3%;
@@ -261,7 +261,7 @@ z-index:3;
   background-color: #b3ddee;
   color: white;
   font-family: 'Lucida Sans', sans-serif;
-  font-size: 0.8vw;
+        font-size: clamp(10px, 1.2vw, 25px);
   font-weight: bold;
   padding: 4px 10px;
   border-radius: 20px;
@@ -271,16 +271,16 @@ z-index:3;
 .info-description {
   border-radius: 20px;
   padding: 1rem 1.2rem;
-    border: 4px solid #51bbda;
+    border: 0.2em solid #51bbda;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
-  font-size: 1vw;
+         font-size: clamp(20px, 1.2vw, 30px);
   color: #3b3b3b;
   line-height: 1.6;
 }
 
 .info-middle-divider {
-  width: 3px;
+  width: 0.2em;
   background-color: #51bbda;
   border-radius: 3px;
   flex-shrink: 0;
@@ -330,12 +330,10 @@ z-index:3;
 
 .infobutton{
       position: absolute;
-    top: 89.5%;
-    left: 28%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 24%;
-    height: 11%;
+bottom: 4%;
+    left: 20%;
+    width: 28%;
+    height: 12%;
       background-color: #ffffff;
       border: 0.2vw solid #51bbda;
       border-radius: 5vw;     
@@ -358,12 +356,10 @@ z-index:3;
 
 .downloadbutton{
         position: absolute;
-    top: 89.5%;
-    left: 55%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 24%;
-    height: 11%;
+bottom: 4%;
+    left: 50%;
+    width: 28%;
+    height: 12%;
       background-color: #ffffff;
       border: 0.2vw solid #51bbda;
       border-radius: 5vw;     
@@ -474,7 +470,7 @@ z-index:3;
     
       background-color: #f1f1f1;
       border: 0.3em solid #51bbda;
-      border-radius: 2%;     
+      border-radius: 2em;     
       background-position: center;
       z-index: 4;
       
@@ -503,16 +499,24 @@ z-index:3;
   overflow:auto;
 }
 
+.popup-title {
+  font-family: 'Lucida Sans', sans-serif;
+        font-size: clamp(35px, 1.2vw, 50px);
+  font-weight: bold;
+  color: #3b3b3b;
+  margin-bottom: 3%;
+}
+
 .popuptext {
   background-color: #e0e0e2;
-  border-radius: 0.9vw;
+  border-radius: 0.9em;
   padding: 1rem 1.2rem;
     border: 0.3em solid #51bbda;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   font-size: clamp(14px, 0.93vw, 16px);
   color: #3b3b3b;
-  line-height: 1.5vw;
+  line-height: 1.5em;
 
   width: 100%;
   max-height: 100%;
@@ -537,13 +541,13 @@ z-index:3;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 1em;
 }
 #RinzeRender{
   position: absolute;
-     bottom: -4%;
-    left: -5%;
-    width: 20%;
+     bottom: -19%;
+    left: -19%;
+    width: 40%;
     height: auto; 
 }
 .CVpopup{
@@ -636,17 +640,21 @@ bottom: 6%;
 }
 .teampopup{
   position: absolute;
-  top: 10%;
-  left: 30%;
-  width: 40%;
-  height: 80%;
+    width: min(1200px, 80vw);
+    height: min(950px, 75vh);
+
+    left: 50%;
+    top: 55%;
+
+    margin-top: -1%;
+    margin-left: 0%;
   background-color: #f1f1f1;
   border: 4px solid #51bbda;
   border-radius: 2%;
   z-index: 4;
 
   opacity: 0;
-  transform: translateY(20px);
+  transform: translate(50%, 50%);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
 
