@@ -7,7 +7,8 @@ body {
       background-repeat: repeat;
       background-size: cover;
       cursor: url(cursor1.png), auto;
-      overflow: hidden;
+          overflow-x: hidden;
+    overflow-y: auto;
     }
 
     #bottom-border {
@@ -459,12 +460,18 @@ z-index:3;
     }
 .popup{
     position: absolute;
-    top: 16%;
-    left: 21%;
+    
+    width: min(1250px, 80vw);
+    height: min(850px, 75vh);
+
+    left: 50%;
+    top: 55%;
+
+    transform: translate(-50%, -50%);
+
     margin-top: -1%;
     margin-left: 0%;
-    width: 60%;
-    height: 70%;
+    
       background-color: #f1f1f1;
       border: 0.3vw solid #51bbda;
       border-radius: 2%;     
@@ -472,7 +479,6 @@ z-index:3;
       z-index: 4;
       
       opacity: 0;
-      transform: translateY(20px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       pointer-events:none;
       background-image: url(popupBigBackground.png);      
@@ -501,9 +507,9 @@ z-index:3;
     border: 0.3vw solid #51bbda;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
-  font-size: 0.93vw;
+  font-size: clamp(14px, 0.93vw, 16px);
   color: #3b3b3b;
-  line-height: 1.6vw;
+  line-height: 1.5vw;
 }
 
 .popup-divider {
@@ -527,20 +533,19 @@ z-index:3;
 }
 #RinzeRender{
   position: absolute;
-  top: 60%;
-  left: 80%;
-  width: 50%;
-  object-fit: cover;
-  z-index: 2;
+  width: 40vw;
+  top: 0%;
+  right: -29%;
 }
 .CVpopup{
     position: absolute;
-    top: 10%;
-    left: 30%;
-    margin-top: -1%;
-    margin-left: 0%;
-    width: 40%;
-    height: 85%;
+    width: min(900px, 80vw);
+    height: min(1300px, 75vh);
+
+    left: 50%;
+    top: 55%;
+
+    transform: translate(-50%, -50%);
       background-color: #f1f1f1;
       border: 4px solid #51bbda;
       border-radius: 2%;     
@@ -548,16 +553,14 @@ z-index:3;
       z-index: 4;
       
       opacity: 0;
-      transform: translateY(20px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       pointer-events:none;
       background-image: url(popupBackground.png);      
             background-size: cover;
 }
 .CVpopup img{
-  width: 60%;
-  
   position: absolute;
+  width: min(700px, 80vw);
   left: 21%;
   top: 3.4%;
   border: 5px solid #51bbda;
@@ -565,12 +568,10 @@ z-index:3;
 }
 .backbutton{
     position: absolute;
-    top: 93%;
-    left: 12%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 35%;
-    height: 8.9%;
+bottom: 6%;
+    left: 0%;
+    width: 5%;
+    height: auto;
       background-color: #ffffff;
       border: 0.2vw solid #51bbda;
       border-radius: 10vw;     
@@ -678,12 +679,12 @@ z-index:3;
 }
 .open-popup{
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, -60%);
   pointer-events: auto;
 }
 .close-popup{
     opacity: 0;
-  transform: translateY(20px);
+  transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
@@ -827,12 +828,10 @@ z-index:3;
 
 #LinkedInButton{
     position: absolute;
-    top: 92%;
-    left: 60%;
-    margin-top: -50px;
-    margin-left: -50px;
+    bottom: 6%;
+    left: 56%;
     width: 7%;
-    height: 10%;    
+    height: auto;   
       z-index: 4;
       display: flex;
       align-items: center;
@@ -853,12 +852,10 @@ z-index:3;
 
 #GithubButton{
     position: absolute;
-    top: 92%;
-    left: 70%;
-    margin-top: -50px;
-    margin-left: -50px;
+   bottom: 6%;
+    left: 65%;
     width: 7%;
-    height: 10%;    
+    height: auto;   
       z-index: 4;
       display: flex;
       align-items: center;
@@ -879,12 +876,10 @@ z-index:3;
 
 #YoutubeButton{
     position: absolute;
-    top: 92%;
-    left: 80%;
-    margin-top: -50px;
-    margin-left: -50px;
+bottom: 6%;
+    left: 74%;
     width: 7%;
-    height: 10%;    
+    height: auto;   
       z-index: 4;
       display: flex;
       align-items: center;
@@ -905,12 +900,10 @@ z-index:3;
 
 #InstaButton{
     position: absolute;
-    top: 92%;
-    left: 90%;
-    margin-top: -50px;
-    margin-left: -50px;
+bottom: 6%;
+    left: 82%;
     width: 7%;
-    height: 10%;    
+    height: auto;     
       z-index: 4;
       display: flex;
       align-items: center;
